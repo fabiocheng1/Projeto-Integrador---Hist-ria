@@ -1,2 +1,2 @@
 # Projeto-Integrador---Hist-ria
-Repositório destinado a parte de desenvolvimento web do projeto integrador conforme a demanda da professora Amanda.
+Repositório destinado ao desenvolvimento web do projeto apresentado para a disciplina de "Projeto Integrador II".
