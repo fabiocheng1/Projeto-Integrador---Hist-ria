@@ -1,0 +1,13 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f2e9; 
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+/* Verde bem claro fundo da página */
+
+h1, h2 {
+  color: #2e7d32; 
+}
+/* Verde escuro titulos e subtitulos*/
