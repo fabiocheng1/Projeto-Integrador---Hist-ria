@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "grafiti";
+    src: url("Fontes/DonGraffiti.otf");
+}
+
+
+table{
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    font-family: grafiti;
+    font-size: 350%;
+    color: aliceblue;
+}
+
+img{
+    width: 50%;
+}
+
+tr{
+    text-align: center;
+}
+
+.carousel-inner > .carousel-item > img {
+  width: 700px;
+  height: 400px; 
+}
+
+body{
+    background-color: #b7da86;
+}
+
+
+
