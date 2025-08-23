@@ -4,6 +4,22 @@
   src: url("Fontes/DonGraffiti.otf");
 }
 
+/* Tirando a estilização do que seria um link habitual e trocando pra como se fosse
+   um texto comum */
+a{
+  /* Tirando estilização de texto sublinhado de links */
+  text-decoration: none;
+
+  /* Tirando a cor azul de link e pondo uma branca pra dar destaque com o botão */
+  color: white;
+}
+
+/* Essa classe foi criada pra o botão de acesso a página inicial cultural, o que
+   irá redirecionar a página inicial histórica provavelmente terá um ID próprio também. */
+#botaoCultural{
+  background: linear-gradient(to top, #659916, #679f19);
+}
+
 /* Definindo que as tags img vão ser um pouco arredondadas */
 img {
   border-radius: 5%;
