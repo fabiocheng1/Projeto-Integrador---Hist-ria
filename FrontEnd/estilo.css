@@ -1,3 +1,58 @@
+.titulo{
+    position: relative;
+    left: 970;
+    top: 240;
+}
+
+
+.primeiroTopico{
+    position: relative;
+    left: 855;
+    bottom: 1300;
+    width: 500;
+
+
+}
+
+.segundoTopico{
+    position: relative;
+    bottom: 1000;
+    right: 70;
+}
+
+.terceiroTopico{
+    position: relative;
+    left: 565;
+    bottom: 825;
+   
+
+}
+
+.quartoTopico{
+    position: relative;
+    bottom: 800;
+    right: 40;
+}
+
+.foto01{
+     position: relative;
+     left: -20; 
+     bottom: -120;
+}
+
+.foto02{
+
+    position: relative;
+    left: 618;
+    top: 400;
+    
+}
+
+.posicao{
+    position: relative;
+    left: 80;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #e0f2e9; 
@@ -5,9 +60,27 @@ body {
   margin: 0;
   padding: 20px;
 }
-/* Verde bem claro fundo da página */
 
 h1, h2 {
-  color: #2e7d32; 
+    color: #2e7d32;
+    font-family: grafiti;
+    text-align: center;
 }
-/* Verde escuro titulos e subtitulos*/
+
+@font-face {
+  font-family: "grafiti";
+  src: url("Fontes/DonGraffiti.otf");
+  /* fonte de graffiti para os titulos */
+}
+
+.textoComBorda2 {
+
+  text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0),
+    2px 2px 0 rgb(0, 0, 0);
+  /* Borda para os titulos */
+}
+
+img {
+  border-radius: 5%;
+  /* Deixa as imagens um pouco arredondadas */
+}
