@@ -1,28 +1,48 @@
-.tituloEsportes{
 
+.titulo{
     position: relative;
-    left: 455;
-    bottom: 270;
-
+    left: 945;
+    top: 240;
 }
 
 
 .primeiroTopico{
     position: relative;
-    left: 400;
-    bottom: 290;
+    left: 870;
+    bottom: 600;
+    width: 500;
+
 
 }
 
 .segundoTopico{
     position: relative;
-    bottom: 260;
-    right: 30;
+    bottom: 500;
+    right: 60;
 }
 
 .terceiroTopico{
     position: relative;
     bottom: 140;
-    right: 15;
+    right: 160;
 
+}
+
+.foto01{
+     position: relative;
+     left: 30; 
+     bottom: -120;
+}
+
+.foto02{
+
+    position: relative;
+    left: 630;
+    top: 700;
+    
+}
+
+.posicao{
+    position: relative;
+    left: 80;
 }
