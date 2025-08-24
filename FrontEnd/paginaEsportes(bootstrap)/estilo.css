@@ -1,0 +1,28 @@
+.tituloEsportes{
+
+    position: relative;
+    left: 455;
+    bottom: 270;
+
+}
+
+
+.primeiroTopico{
+    position: relative;
+    left: 400;
+    bottom: 290;
+
+}
+
+.segundoTopico{
+    position: relative;
+    bottom: 260;
+    right: 30;
+}
+
+.terceiroTopico{
+    position: relative;
+    bottom: 140;
+    right: 15;
+
+}
