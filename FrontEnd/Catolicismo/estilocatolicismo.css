@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f2e9; 
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+/* Verde bem claro fundo da página */
+
+h1, h2 {
+  color: #2e7d32; 
+}
+/* Verde escuro titulos e subtitulos*/
+
+.topbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:1rem;
+  padding: .75rem 1rem;
+  background: rgb(28, 151, 28);
+  color:white
+}
+
+.brand{ margin:0; line-height:0; }      
+.brand img{
+  height:44px;                 
+  width:auto;
+  display:block;
+}
+
+.back, .menu{
+  background:transparent;
+  border:0;
+  color: white;
+  font-size:1.5rem;
+  cursor:pointer;
+}
+
+@media (min-width:768px){
+  .brand img{ height:56px; }   
+}
