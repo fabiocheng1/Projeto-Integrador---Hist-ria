@@ -25,18 +25,16 @@ img {
   border-radius: 5%;
 }
 
+
 #imagemCultural{
   /* Fazendo que a largura seja de 70% */
-  width: 50%;
+  max-width: 45%;
 
   /* Fazendo que a altura seja de 15% */
-  height: 15%;
-
-  /* Fazendo a origem ser no meio */
-  left: 50%;
+  min-height: 15%;
 
   /* Fazendo centralizar no meio */
-  transform: translateX(50%);
+  transform: translateX(60%);
   
 }
 
