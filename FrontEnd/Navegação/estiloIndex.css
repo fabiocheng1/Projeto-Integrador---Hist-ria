@@ -1,3 +1,19 @@
+/* Importando fonte do google fontes */
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+h1 {
+  /* Mantendo todos os H1 alinhados ao meio da página */
+  text-align: center;
+
+  /* Fazendo a fonte dos H1 ser a mesma fonte que "importei" do google fontes lá no início desse arquivo de estilo*/
+  font-family: "Sedgwick Ave Display";
+
+  /* O tamanho da fonte sempre irá ocupar 350% da tela, independente do aparelho*/
+  font-size: 350%;
+
+  /* Mantendo a cor dos H1 com essa mais branca*/
+  color: aliceblue;
+}
 
 /* Tirando a estilização do que seria um link habitual e trocando pra como se fosse
    um texto comum */
@@ -28,24 +44,12 @@ img {
   /* Fazendo que a altura seja de 15% */
   min-height: 15%;
 
+
   /* Fazendo centralizar no meio */
   transform: translateX(60%);
   
 }
 
-h1 {
-  /* Mantendo todos os H1 alinhados ao meio da página */
-  text-align: center;
-
-  /* Fazendo a fonte dos H1 ser a mesma fonte que "importei" do google fontes lá no códgo HTML*/
-  font-family: "Sedgwick Ave Display";
-
-  /* O tamanho da fonte sempre irá ocupar 350% da tela, independente do aparelho*/
-  font-size: 350%;
-
-  /* Mantendo a cor dos H1 com essa mais branca*/
-  color: aliceblue;
-}
 
 /* Acessando as tags img que são "filhas" de elementos com a classe "carousel-item" que por sua vez são "filhas" de elementos com a classe "carousel-inner, iremos
    manter essa proporção de preenchimento da página.'*/
