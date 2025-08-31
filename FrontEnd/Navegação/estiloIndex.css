@@ -31,10 +31,7 @@ a{
   background: linear-gradient(to top, #659916, #679f19);
 }
 
-/* Definindo que as tags img vão ser um pouco arredondadas */
-img {
-  border-radius: 5%;
-}
+
 
 
 #imagemCultural{
@@ -116,7 +113,7 @@ body {
   opacity: 0.4;
 
   /* Definindo as bordas como arredondadas, com 10% */
-  border-radius: 10%;
+  border-radius: 5%;
 }
 
 /* Essa clase sendo utilizada para formatar e estilizar a forma que fica
