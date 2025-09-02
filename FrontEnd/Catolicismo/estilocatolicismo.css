@@ -1,42 +1,41 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #e0f2e9; 
-  color: #333;
-  margin: 0;
-  padding: 20px;
-}
-/* Verde bem claro fundo da página */
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 
-h1, h2 {
-  color: #2e7d32; 
-}
-/* Verde escuro titulos e subtitulos*/
 
-.topbar{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap:1rem;
-  padding: .75rem 1rem;
-  background: rgb(28, 151, 28);
-  color:white
+/* DEFININDO TODOS OS H1'S DO PROJETO COM A SEGUINTE FONTE */
+
+h1{
+    font-family: Sedgwick Ave Display;
+    
 }
 
-.brand{ margin:0; line-height:0; }      
-.brand img{
-  height:44px;                 
-  width:auto;
-  display:block;
+
+
+
+
+/* CONFIGURAÇÃO DA NAVBAR: */
+
+
+/* CONFIGURANDO O TÍTULO DA NAVBAR */
+.tituloNavbar{
+    font-family: Sedgwick Ave Display;
+    color: white;
 }
 
-.back, .menu{
-  background:transparent;
-  border:0;
-  color: white;
-  font-size:1.5rem;
-  cursor:pointer;
+/* DEFININDO A COR DE FUNDO DA NAVBAR PARA A DESEJADA */
+.corNavbar{
+    background-color: #00bf63;
 }
 
-@media (min-width:768px){
-  .brand img{ height:56px; }   
+/* DEFINO COM QUE A NAVBAR ENCONSTE NO TOPO DA PÁGINA AO COLOCAR UM MARGIN TOP NEGATIVO */
+.posicaoNavbar{
+    margin-top: -6pt;
 }
+
+
+
+/* CONFIGURAÇÃO DE ESPAÇAMENTO DAS IMAGENS DA PÁGINA */
+
+.Imagem{
+    padding: 10pt;
+}
+
