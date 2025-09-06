@@ -1,52 +1,13 @@
 /* Importando fonte do google fontes */
-@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
 
 h1 {
-  /* Mantendo todos os H1 alinhados ao meio da página */
-  text-align: center;
-
   /* Fazendo a fonte dos H1 ser a mesma fonte que "importei" do google fontes lá no início desse arquivo de estilo*/
   font-family: "Sedgwick Ave Display";
 
   /* O tamanho da fonte sempre irá ocupar 350% da tela, independente do aparelho*/
-  font-size: 350%;
-
-  /* Mantendo a cor dos H1 com essa mais branca*/
-  color: aliceblue;
+  font-size: 70pt;
 }
-
-/* Tirando a estilização do que seria um link habitual e trocando pra como se fosse
-   um texto comum */
-a{
-  /* Tirando estilização de texto sublinhado de links */
-  text-decoration: none;
-
-  /* Tirando a cor azul de link e pondo uma branca pra dar destaque com o botão */
-  color: white;
-}
-
-/* Essa classe foi criada pra o botão de acesso a página inicial cultural, o que
-   irá redirecionar a página inicial histórica provavelmente terá um ID próprio também. */
-#botaoCultural{
-  background: linear-gradient(to top, #659916, #679f19);
-}
-
-
-
-
-#imagemCultural{
-  /* Fazendo que a largura seja de 70% */
-  max-width: 45%;
-
-  /* Fazendo que a altura seja de 15% */
-  min-height: 15%;
-
-
-  /* Fazendo centralizar no meio */
-  transform: translateX(60%);
-  
-}
-
 
 /* Acessando as tags img que são "filhas" de elementos com a classe "carousel-item" que por sua vez são "filhas" de elementos com a classe "carousel-inner, iremos
    manter essa proporção de preenchimento da página.'*/
@@ -69,84 +30,25 @@ body {
 /* Essa classe está sendo utilizada para formatar e estilizar os botões de "next" do
    carrosel de notícias, mais especificamente a forma atrás desses */
 .centralizarForma1 {
-  /* Deixando com fundo na cor bisque */
-  background-color: bisque;
-
-  /* Fazendo que a largura seja de 70% */
-  width: 70%;
-
-  /* Fazendo que a altura seja de 15% */
-  height: 15%;
-
   /* Fazendo a origem ser no meio */
   left: 50%;
 
   /* Fazendo centralizar no meio */
   transform: translateX(-50%);
-
-  /* Definindo a opacidade como 0.4 */
-  opacity: 0.4;
-
-  /* Definindo as bordas como arredondadas, com 30% */
-  border-radius: 30%;
 }
 
 /* Essa classe está sendo utilizada para formatar e estilizar a forma que fica
    atrás das imagens das notícias */
 .centralizarForma2 {
-  /* Deixando com fundo na cor white */
-  background-color: white;
-
-  /* Fazendo que a largura seja de 65% */
-  width: 65%;
-
-  /* Fazendo que a altura seja de 100% */
-  height: 100%;
-
   /* Fazendo a origem ser no meio */
   left: 50%;
 
   /* Fazendo centralizar no meio */
   transform: translateX(-50%);
-
-  /* Definindo a opacidade como 0.4 */
-  opacity: 0.4;
-
-  /* Definindo as bordas como arredondadas, com 10% */
-  border-radius: 5%;
 }
 
-/* Essa clase sendo utilizada para formatar e estilizar a forma que fica
-   atrás do texto abaixo da apresentação dos grupos na parte do "SOBRE NÓS" */
-.centralizarForma3 {
-  /* Deixando com fundo na cor white */
-  background-color: white;
-
-  /* Fazendo que a largura seja de 100% */
-  width: 100%;
-
-  /* Fazendo que a altura seja de 100% */
-  height: 100%;
-
-  /* Definindo as bordas como arredondadas, com 10% */
-  border-radius: 10%;
-}
-
-/* Essa classe está sendo utilizada para estilizar o card do sobre nós, limitando
-   a largura pra 80% e uma borda arredondada de 10% */
-.formatacaoCard {
-  /* Definindo a largura máxima de 80% */
-  max-width: 80%;
-
-  /* Definindo as bordas como arredondadas, com 10% */
-  border-radius: 10%;
-}
-
-/* Essa classe deixa os textos brancos com borda preta */
+/* Essa classe deixa os textos com borda preta */
 .textoComBorda {
-  /* Deixando o texto branco */
-  color: white;
-
   /* Aplicando as sombras */
   text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black,
     3px 3px 0 black;

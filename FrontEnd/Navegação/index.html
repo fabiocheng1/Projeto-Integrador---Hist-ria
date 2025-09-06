@@ -2,11 +2,12 @@
   <head>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css"
-      integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.8/css/bootstrap.min.css"
+      integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link rel="stylesheet" href="estiloIndex.css" />
   </head>
 
@@ -17,11 +18,13 @@
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-          <img
-            class="img-fluid rounded"
-            src="https://www.socialismocriativo.com.br/wp-content/uploads/2020/04/CULTURA-portal-Alo.jpg"
-            class="mt-5"
-          />
+          <center>
+            <img
+              class="img-fluid rounded-5 shadow-lg"
+              src="https://www.socialismocriativo.com.br/wp-content/uploads/2020/04/CULTURA-portal-Alo.jpg"
+              class="mt-5"
+            />
+          </center>
         </div>
         <div class="col-3"></div>
       </div>
@@ -29,10 +32,16 @@
       <div class="row mb-5">
         <div class="col">
           <div class="container-fluid d-flex justify-content-center">
-            <button id="botaoCultural" type="button" class="btn btn-success">
+            <button
+              id="botaoCultural"
+              type="button"
+              class="btn btn-success bg-gradient shadow-lg"
+            >
               <!-- Essa tag <a> abaixo vai servir como um botão para redirecionar o usuário para a pagina inicial
                 da parte cultural do projeto -->
-              <a href="inicialCultural.html"
+              <a
+                href="inicialCultural.html"
+                class="text-decoration-none text-light"
                 ><b>Ver manifestações culturais</b></a
               >
             </button>
@@ -40,122 +49,115 @@
         </div>
       </div>
 
-      <h1 class="text-center">Noticias em Neves</h1>
+      <h1 class="text-center text-light">Noticias em Neves</h1>
 
       <!-- Essa parte de notícias em Neves vai ter um "carrosel" de notícias que podem
                 ser scrolladas para o lado -->
 
       <div class="row mb-5">
-        <div class="col">
-          <div class="container-fluid p-0 position-relative">
-            <div class="position-absolute z-index-n1 centralizarForma2"></div>
-            <div id="carouselExampleCaptions" class="carousel slide">
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="https://s2-g1.glbimg.com/Y0228WIHqStiymuXzm987eCNnnk=/0x0:1920x1080/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/b/x/ByEktBSs2ZY52FN8PBVA/teto-neves.jpg"
-                    class="d-block w-50 mx-auto rounded"
-                  />
-
-                  <div class="carousel-caption d-none d-md-block">
-                    <h2 class="textoComBorda">
-                      Após temporal, bairros de Ribeirão das Neves ficam sem
-                      energia elétrica
-                    </h2>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="https://s2-g1.glbimg.com/1lCid-NDspTKyA2vViqtSLuXI0A=/0x0:616x822/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/J/D/NX4nRcQDOwCNvh8p9Z9g/whatsapp-image-2020-01-02-at-13.50.01-1-.jpeg"
-                    class="d-block w-50 mx-auto rounded"
-                  />
-                  <div class="carousel-caption d-none d-md-block">
-                    <h2 class="textoComBorda">
-                      Ribeirão das Neves, na Grande BH, também registra estragos
-                      provocados pela chuva
-                    </h2>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="https://s2-g1.glbimg.com/aVnNIblr6u3gAeDEmc8z0N_EYdY=/0x0:1920x1080/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/5/9/ABOyUwR4afK5ZXfSCCBQ/fabrica-neves2.jpg"
-                    class="d-block w-50 mx-auto rounded"
-                  />
-                  <div class="carousel-caption d-none d-md-block">
-                    <h2 class="textoComBorda">
-                      Prefeitura de Ribeirão das Neves decreta emergência e faz
-                      campanha para reconstrução após temporal
-                    </h2>
-                  </div>
-                </div>
-              </div>
-
+        <div class="col"></div>
+        <div class="col-8">
+          <div id="carouselExampleCaptions" class="carousel slide shadow-lg">
+            <div class="carousel-indicators">
               <button
-                class="carousel-control-prev"
                 type="button"
                 data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev"
-              >
-                <div
-                  class="position-absolute z-index-n1 centralizarForma1"
-                ></div>
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-
-                <span class="visually-hidden">Previous</span>
-              </button>
-
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
               <button
-                class="carousel-control-next"
                 type="button"
                 data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next"
-              >
-                <div
-                  class="position-absolute z-index-n1 centralizarForma1"
-                ></div>
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
             </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://s2-g1.glbimg.com/Y0228WIHqStiymuXzm987eCNnnk=/0x0:1920x1080/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/b/x/ByEktBSs2ZY52FN8PBVA/teto-neves.jpg"
+                  class="d-block w-100 rounded-3"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="textoComBorda">
+                    Após temporal, bairros de Ribeirão das Neves ficam sem
+                    energia elétrica
+                  </h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://s2-g1.glbimg.com/1lCid-NDspTKyA2vViqtSLuXI0A=/0x0:616x822/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/J/D/NX4nRcQDOwCNvh8p9Z9g/whatsapp-image-2020-01-02-at-13.50.01-1-.jpeg"
+                  class="d-block w-100 rounded-3"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="textoComBorda">
+                    Ribeirão das Neves, na Grande BH, também registra estragos
+                    provocados pela chuva
+                  </h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://s2-g1.glbimg.com/aVnNIblr6u3gAeDEmc8z0N_EYdY=/0x0:1920x1080/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/5/9/ABOyUwR4afK5ZXfSCCBQ/fabrica-neves2.jpg"
+                  class="d-block w-100 rounded-3"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="textoComBorda">
+                    Prefeitura de Ribeirão das Neves decreta emergência e faz
+                    campanha para reconstrução após temporal
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
+        <div class="col"></div>
       </div>
+      <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
-      <h1>Sobre nós</h1>
+      <h1 class="text-center text-light">Sobre nós</h1>
       <!-- Esse sobre nós vai ter imagens que vão conter também o nome de cada um dos membros  -->
       <div class="row">
         <div class="col-1"></div>
         <div class="col-5">
           <center>
-            <div class="card mb-3">
+            <div class="card mb-3 shadow-lg">
               <img
                 class="card-img-top"
                 src="https://png.pngtree.com/png-vector/20240715/ourlarge/pngtree-a-group-of-people-are-enjoying-png-image_13093741.png"
@@ -187,13 +189,13 @@
 
         <div class="col-5">
           <center>
-            <div class="card mb-3">
+            <div class="card mb-3 shadow-lg">
               <img
                 class="card-img-top"
                 src="https://png.pngtree.com/png-vector/20240715/ourlarge/pngtree-a-group-of-people-are-enjoying-png-image_13093741.png"
                 alt="Card image cap"
               />
-              <div class="card-body">
+              <div class="card-body shadow-lg">
                 <h5 class="card-title">Grupo cultural</h5>
                 <p class="card-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -221,11 +223,11 @@
 
       <!-- Esse texto abaixo vai ser uma breve descrição do grupo e nossas motivações e tudo mais,
                 um texto mais emotivo talvez de nossos objetivos com o projeto-->
-      <div class="row">
+      <div class="row mt-5">
         <div class="col"></div>
 
         <div class="col-10">
-          <p class="text-center centralizarForma3">
+          <p class="text-center bg-light w-100 h-100 rounded-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -240,7 +242,7 @@
       </div>
       <!-- Aqui colocaremos as referências que iremos usar para o desenvolvimento do site em relação
                 as pesquisas desenvolvidas -->
-      <h1 class="mt-5">Referências</h1>
+      <h1 class="mt-5 text-center text-light">Referências</h1>
 
       <div class="row">
         <div class="col">
