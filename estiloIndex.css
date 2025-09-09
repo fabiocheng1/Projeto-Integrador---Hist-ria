@@ -1,0 +1,55 @@
+/* Importando fonte do google fontes */
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
+
+h1 {
+  /* Fazendo a fonte dos H1 ser a mesma fonte que "importei" do google fontes lá no início desse arquivo de estilo*/
+  font-family: "Sedgwick Ave Display";
+
+  /* O tamanho da fonte sempre irá ocupar 350% da tela, independente do aparelho*/
+  font-size: 70pt;
+}
+
+/* Acessando as tags img que são "filhas" de elementos com a classe "carousel-item" que por sua vez são "filhas" de elementos com a classe "carousel-inner, iremos
+   manter essa proporção de preenchimento da página.'*/
+.carousel-inner > .carousel-item > img {
+  width: 40%;
+  height: 700px;
+}
+
+/* Deixando o body com a mesma cor de fundo que o esboço de telas feito
+na etapa passada, adicionado um degradê ao fundo*/
+body {
+  /* 
+  Adicionado o degradê junto da cor principal
+  Cor principal (a mais clara) -> #b7da86
+  Cor secundária (a mais escura) -> #8ead62
+  */
+  background: linear-gradient(to top, #8ead62, #b7da86);
+}
+
+/* Essa classe está sendo utilizada para formatar e estilizar os botões de "next" do
+   carrosel de notícias, mais especificamente a forma atrás desses */
+.centralizarForma1 {
+  /* Fazendo a origem ser no meio */
+  left: 50%;
+
+  /* Fazendo centralizar no meio */
+  transform: translateX(-50%);
+}
+
+/* Essa classe está sendo utilizada para formatar e estilizar a forma que fica
+   atrás das imagens das notícias */
+.centralizarForma2 {
+  /* Fazendo a origem ser no meio */
+  left: 50%;
+
+  /* Fazendo centralizar no meio */
+  transform: translateX(-50%);
+}
+
+/* Essa classe deixa os textos com borda preta */
+.textoComBorda {
+  /* Aplicando as sombras */
+  text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black,
+    3px 3px 0 black;
+}

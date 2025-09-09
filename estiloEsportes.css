@@ -1,0 +1,48 @@
+
+.titulo{
+    position: relative;
+    left: 560;
+    top: 70;
+}
+
+
+.primeiroTopico{
+    position: relative;
+    left: 260;
+    bottom: 200;
+    
+
+
+}
+
+.segundoTopico{
+    position: relative;
+    bottom: 150;
+    right: 220;
+}
+
+.terceiroTopico{
+    position: relative;
+    bottom: 40;
+    right: 210;
+
+}
+
+.foto01{
+     position: relative;
+     left: -356; 
+     bottom: -120;
+}
+
+.foto02{
+
+    position: relative;
+    left: 540;
+    top: 300;
+    
+}
+
+.posicao{
+    position: relative;
+    left: 80;
+}
