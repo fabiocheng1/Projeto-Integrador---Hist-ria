@@ -19,6 +19,10 @@ Ao escanear o QR Code de um ponto específico da cidade, o usuário será redire
 
 Aparecerá uma barra de pesquisa ao clicar no ícone de três risquinhos no canto superior direito das barras de navegação, desse modo, o usuário poderá pesquisar algum ponto cultural específico, desde que esteja cadastrado no site.
 
+3. Carrosel de Notícias
+
+Um carrosel das principais notícias de Ribeião das Neves.
+
 ## Autores
 *	[Arthur Pereira Rodrigues](https://github.com/Arthur16-P)
 * [Bernardo Bonifácio Costa](https://github.com/Bernas001)
