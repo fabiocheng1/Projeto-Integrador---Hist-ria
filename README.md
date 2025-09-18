@@ -8,9 +8,11 @@ O projeto Escaneia Neves consiste na criação de um site de divulgação inform
 
 ## Funcionalidades Principais
 1.	Escanear QR Codes
+
 Ao escanear o QR Code de um ponto específico da cidade, o usuário será redirecionado a uma página de ponto histórico feita pelo grupo histórico do projeto Escaneia Neves. Desse modo, poderá compreender sobre a história desse ponto em específico. A partir da página histórica, o usuário pode acessar as manifestações culturais de determinado ponto, assim, possibilitando a navegação de páginas históricas e culturais de ambos os grupos durante todo o uso do site do projeto Escaneia Neves.
 
 2. Pesquisa de Pontos Culturais
+
 Aparecerá uma barra de pesquisa ao clicar no ícone de três risquinhos no canto superior direito das barras de navegação, desse modo, o usuário poderá pesquisar algum ponto cultural específico, desde que esteja cadastrado no site.
 
 ## Autores
