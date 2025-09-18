@@ -16,5 +16,12 @@ Ao escanear o QR Code de um ponto específico da cidade, o usuário será redire
 Aparecerá uma barra de pesquisa ao clicar no ícone de três risquinhos no canto superior direito das barras de navegação, desse modo, o usuário poderá pesquisar algum ponto cultural específico, desde que esteja cadastrado no site.
 
 ## Autores
-⦁	[João Victor de Aguiar Neves](https://github.com/Joao-AguiarN)
+*	[Arthur Pereira Rodrigues](https://github.com/Arthur16-P)
+* [Bernardo Bonifácio Costa](https://github.com/Bernas001)
+* [Elias Riquelme de Moraes Rodrigues Cezário](https://github.com/EliasRick)
+* [Emanuel Teixeira Brandão](https://github.com/emanuel0-1)
+* [João Victor de Aguiar Neves](https://github.com/Joao-AguiarN)
+* [Rafael da Silveira Silva](https://github.com/fabiocheng1)
+*	[Richard Ferreira Sousa](https://github.com/richardfsousa)
+* [Yank Fernandes Marinho](https://github.com/Yankraft)
 
