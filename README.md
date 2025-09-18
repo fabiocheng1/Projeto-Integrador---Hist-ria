@@ -1,8 +1,18 @@
-# Projeto Escaneia Neves - PI II
-Repositório destinado ao desenvolvimento web do projeto apresentado para a disciplina de "Projeto Integrador II".
+# Projeto Escaneia Neves
 
-https://docs.google.com/document/d/1FfaPN6w81Awh2wrsIOTB5tF2470CTmS3ZQkr0_AOOaE/edit?usp=sharing --> Documento referente às Atas de Reunião 
+**Link de Acesso Público ao Site:** [POR O LINK AQUI TAMBÉM ;)](POR O LINK DO SITE)
+**Link de Acesso ao Fluxo de Navegação:** [POR O LINK AQUI TAMBÉM ;)](POR O LINK DO SITE)
 
-https://docs.google.com/spreadsheets/d/1n6am-BMKf83DgvzOaT2uMckqw-GlIPCKt-C3mr7Iu58/edit?usp=sharing --> Documento referente a separação de tarefas e demais separações
+## O que é o Projeto Escaneia Neves?
+O projeto Escaneia Neves consiste na criação de um site de divulgação informacional sobre aspectos históricos e culturais de Ribeirão das Neves com o uso de QR Codes espalhados pela cidade, em pontos específicos, vinculados a páginas do site. O objetivo é valorizar a memória coletiva dos moradores locais e promover o conhecimento sobre os aspectos históricos e culturais da cidade, reforçando a identidade histórico-cultural com o acesso a informação.
 
-https://docs.google.com/document/d/11ehGUTLZSnJHdJwu9k29QBQYkPOTARIOw-0Rk4hRNA0/edit?usp=sharing --> Link do Docs para acesso do Guia de Organização do Projeto.
+## Funcionalidades Principais
+1.	Escanear QR Codes
+Ao escanear o QR Code de um ponto específico da cidade, o usuário será redirecionado a uma página de ponto histórico feita pelo grupo histórico do projeto Escaneia Neves. Desse modo, poderá compreender sobre a história desse ponto em específico. A partir da página histórica, o usuário pode acessar as manifestações culturais de determinado ponto, assim, possibilitando a navegação de páginas históricas e culturais de ambos os grupos durante todo o uso do site do projeto Escaneia Neves.
+
+2. Pesquisa de Pontos Culturais
+Aparecerá uma barra de pesquisa ao clicar no ícone de três risquinhos no canto superior direito das barras de navegação, desse modo, o usuário poderá pesquisar algum ponto cultural específico, desde que esteja cadastrado no site.
+
+## Autores
+⦁	[João Victor de Aguiar Neves](https://github.com/Joao-AguiarN)
+
