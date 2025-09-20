@@ -23,6 +23,9 @@ Aparecerá uma barra de pesquisa ao clicar no ícone de três risquinhos no cant
 
 Um carrosel das principais notícias de Ribeião das Neves.
 
+4. Botão voltar
+Possibilita que o usuário possa transitar entre as páginas, voltando para uma página anteriormente visitada, ao clicar no botão de "voltar" a esquerda da navbar fixa ao topo das páginas.
+
 ## Autores
 *	[Arthur Pereira Rodrigues](https://github.com/Arthur16-P)
 * [Bernardo Bonifácio Costa](https://github.com/Bernas001)
