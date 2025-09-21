@@ -1,0 +1,296 @@
+<html>
+  <head>
+    <title>Escaneia Neves</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.8/css/bootstrap.min.css"
+      integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="estiloIndex.css" />
+  </head>
+
+  <body>
+    <!-- Essa imagem abaixo vai ser a montagem que vai conter todas as manifestações culturais 
+                de nosso projeto -->
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <center>
+            <img
+              class="img-fluid rounded-5 shadow-lg"
+              src="https://www.socialismocriativo.com.br/wp-content/uploads/2020/04/CULTURA-portal-Alo.jpg"
+              class="mt-5"
+            />
+          </center>
+        </div>
+        <div class="col-3"></div>
+      </div>
+
+      <div class="row mb-5">
+        <div class="col">
+          <div class="container-fluid d-flex justify-content-center">
+            <button
+              id="botaoCultural"
+              type="button"
+              class="btn btn-success bg-gradient shadow-lg"
+            >
+              <!-- Essa tag <a> abaixo vai servir como um botão para redirecionar o usuário para a pagina inicial
+                da parte cultural do projeto -->
+              <a
+                href="FrontEnd/Navegação/inicialCultural.html"
+                class="text-decoration-none text-light"
+                ><b>Ver manifestações culturais</b></a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="text-center text-light">Noticias em Neves</h1>
+
+      <!-- Essa parte de notícias em Neves vai ter um "carrosel" de notícias que podem
+                ser scrolladas para o lado -->
+
+<div class="row">
+  <div class="col"></div>
+  <div class="col-8">
+<div id="carouselExampleAutoplaying" class="carousel slide mb-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://s2-g1.glbimg.com/Y0228WIHqStiymuXzm987eCNnnk=/0x0:1920x1080/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/b/x/ByEktBSs2ZY52FN8PBVA/teto-neves.jpg" class="d-block w-100" alt="...">
+    <div class="carousel-caption d-none d-md-block">
+    <h3 class="textoComBorda"> Após temporal, bairros de Ribeirão das Neves ficam sem
+          energia elétrica</h3>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://s2-g1.glbimg.com/1lCid-NDspTKyA2vViqtSLuXI0A=/0x0:616x822/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/J/D/NX4nRcQDOwCNvh8p9Z9g/whatsapp-image-2020-01-02-at-13.50.01-1-.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+    <h3 class="textoComBorda"> Ribeirão das Neves, na Grande BH, também registra estragos
+                    provocados pela chuva</h3>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://s2-g1.glbimg.com/aVnNIblr6u3gAeDEmc8z0N_EYdY=/0x0:1920x1080/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/5/9/ABOyUwR4afK5ZXfSCCBQ/fabrica-neves2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+    <h3 class="textoComBorda"> Prefeitura de Ribeirão das Neves decreta emergência e faz
+                    campanha para reconstrução após temporal</h3>
+  </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  </div>
+  <div class="col"></div>
+</div>
+
+  
+      <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+
+      <h1 class="text-center text-light">Sobre nós</h1>
+      <!-- Esse sobre nós vai ter imagens que vão conter também o nome de cada um dos membros  -->
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-5">
+          <center>
+            <div class="card mb-3 shadow-lg">
+              <img
+                class="card-img-top"
+                src="https://png.pngtree.com/png-vector/20240715/ourlarge/pngtree-a-group-of-people-are-enjoying-png-image_13093741.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Grupo Histórico</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                  eget ligula eu lectus lobortis condimentum. Aliquam nonummy
+                  auctor massa. Pellentesque habitant morbi tristique senectus
+                  et netus et malesuada fames ac turpis egestas. Nulla at risus.
+                  Quisque purus magna, auctor et, sagittis ac, posuere eu,
+                  lectus. Nam mattis, felis ut adipiscingLorem ipsum dolor sit
+                  amet, consectetur adipiscing elit. Etiam eget ligula eu lectus
+                  lobortis condimentum. Aliquam nonummy auctor massa.
+                  Pellentesque habitant morbi tristique senectus et netus et
+                  malesuada fames ac turpis egestas. Nulla at risus. Quisque
+                  purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam
+                  mattis, felis ut adipiscing
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+
+        <div class="col-5">
+          <center>
+            <div class="card mb-3 shadow-lg">
+              <img
+                class="card-img-top"
+                src="https://png.pngtree.com/png-vector/20240715/ourlarge/pngtree-a-group-of-people-are-enjoying-png-image_13093741.png"
+                alt="Card image cap"
+              />
+              <div class="card-body shadow-lg">
+                <h5 class="card-title">Grupo cultural</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                  eget ligula eu lectus lobortis condimentum. Aliquam nonummy
+                  auctor massa. Pellentesque habitant morbi tristique senectus
+                  et netus et malesuada fames ac turpis egestas. Nulla at risus.
+                  Quisque purus magna, auctor et, sagittis ac, posuere eu,
+                  lectus. Nam mattis, felis ut adipiscingLorem ipsum dolor sit
+                  amet, consectetur adipiscing elit. Etiam eget ligula eu lectus
+                  lobortis condimentum. Aliquam nonummy auctor massa.
+                  Pellentesque habitant morbi tristique senectus et netus et
+                  malesuada fames ac turpis egestas. Nulla at risus. Quisque
+                  purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam
+                  mattis, felis ut adipiscing
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="col-1"></div>
+      </div>
+
+<!-- Os orientadores -->
+      <div class="row">
+       
+        <div class="col-4">
+          <center>
+            <div class="card mb-3 shadow-lg">
+              <img
+                class="card-img-top"
+                src="https://png.pngtree.com/png-vector/20210218/ourmid/pngtree-man-silhouette-png-image_2919624.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Wellington Pereira</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus optio sint laboriosam quis assumenda iure reiciendis tempora cumque? Eius!
+                <ul>
+                  <li>Graduação em História</li>
+                  <li>Pós Graduação em Docência do Ensino Superior </li>
+                  <li>Mestre em Educação e Formação Humana</li>
+                </ul>
+                </p>
+               
+              </div>
+            </div>
+          </center>
+        </div>
+
+        <div class="col-4">
+          <center>
+            <div class="card mb-3 shadow-lg">
+              <img
+                class="card-img-top"
+                src="https://static.vecteezy.com/ti/vetor-gratis/p1/23547790-silhueta-mulher-em-pe-gratis-vetor.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body shadow-lg">
+                <h5 class="card-title">Amanda Ribeiro</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quae eum nostrum! Temporibus architecto id laudantium hic vitae error officia!
+                 <ul>
+                    <li>Graduação em História</li>
+                    <li>Mestrado em História</li>
+                    <li>Doutorado em andamento em História</li>
+                  </ul>                
+                </p>
+              
+              </div>
+            </div>
+          </center>
+        </div>
+
+        <div class="col-4">
+          <center>
+            <div class="card mb-3 shadow-lg">
+              <img
+                class="card-img-top"
+                src="https://png.pngtree.com/png-vector/20210218/ourmid/pngtree-man-silhouette-png-image_2919624.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body shadow-lg">
+                <h5 class="card-title">Moisés Pereira</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, culpa?                  
+                  <ul>
+                    <li>Bacharelado em Ciência da Computação</li>
+                    <li>Especialização em Docência</li>
+                    <li>Mestrado em Modelagem Matemática e Computacional</li>
+                  <li>Doutorado em Modelagem Matemática e Computacional</li>
+                  </ul>                
+                </p>
+                
+              </div>
+            </div>
+          </center>
+        </div>
+
+        
+      </div>
+
+
+
+
+      <!-- Esse texto abaixo vai ser uma breve descrição do grupo e nossas motivações e tudo mais,
+                um texto mais emotivo talvez de nossos objetivos com o projeto-->
+      <div class="row mt-5">
+        <div class="col"></div>
+
+        <div class="col-10">
+          <p class="text-center bg-light w-100 h-100 rounded-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+
+        <div class="col"></div>
+      </div>
+      <!-- Aqui colocaremos as referências que iremos usar para o desenvolvimento do site em relação
+                as pesquisas desenvolvidas -->
+      <h1 class="mt-5 text-center text-light">Referências</h1>
+
+      <div class="row">
+        <div class="col">
+          <ol>
+            <li>Referência1, Lorem ipsum dolor sit amet</li>
+            <li>Referência2, Lorem ipsum dolor sit amet, consectetur elit</li>
+            <li>Referência3, Lorem sit amet, consectetur elit</li>
+            <li>Referência4, dolor sit amet, consectetur adipiscing elit</li>
+            <li>Referência5, ipsum dolor sit amet, adipiscing elit</li>
+            <li>Referência1, Lorem ipsum dolor sit amet</li>
+            <li>Referência2, Lorem ipsum dolor sit amet, consectetur elit</li>
+            <li>Referência3, Lorem sit amet, consectetur elit</li>
+            <li>Referência4, dolor sit amet, consectetur adipiscing elit</li>
+            <li>Referência5, ipsum dolor sit amet, adipiscing elit</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.min.js"
+      integrity="sha512-zKeerWHHuP3ar7kX2WKBSENzb+GJytFSBL6HrR2nPSR1kOX1qjm+oHooQtbDpDBSITgyl7QXZApvDfDWvKjkUw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
