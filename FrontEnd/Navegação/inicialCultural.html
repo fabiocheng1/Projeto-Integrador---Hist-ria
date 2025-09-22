@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Escaneia Neves</title>
-    <link rel="stylesheet" href="estilopaginacultural.css" />
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css"
@@ -9,61 +9,149 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="estiloPaginaCultural.css">
   </head>
   <body>
-    <nav class="navbar" style="background-color: #48a05e" data-bs-theme="light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../../index.html">Escaneia Neves</a>
+    <!-- NAVBAR DA PÁGINA -->
+    <nav class="navbar bg-body-tertiary">
+      <!-- CONTAINER QUE NOS PROPORCIONARÁ A RESPONSIVIDADE DA NAVBAR (IRÁ OCUPAR TODO O ESPAÇO) -->
+
+      <div class="container-fluid corNavbar posicaoNavbar">
+        <!-- DEFININDO UMA LINHA QUE IRÁ OCUPAR TODO O CONTAINER E QUE IRÁ AJUSTAR SEUS ITENS NO CENTRO JUNTO AO TEXTO -->
+        <div class="row w-100 align-items-center text-center">
+          <!-- DEFININDO UMA COLUNA QUE IRÁ OCUPAR APENAS 1/4 DO TAMANHO TOTAL DO CONTAINER E QUE IRÁ FICAR CENTRALIZADO PARA POSICIONAR O BOTÃO DE VOLTAR AO INDEX -->
+          <div class="col-sm-3 d-flex justify-content-start">
+            <!-- Teria o ícone de voltar aqui como nas outras páginas, mas como essa já é a página que o botão de
+             voltar manda, colocar o botão de voltar nessa navbar em específico seria redundante -->
+          </div>
+          <!-- COLUNA QUE IRÁ OCUPAR 1/2 DO CONTAINER E POSICIONA OS SEUS ELEMENTOS CENTRALIZADOS -->
+          <div class="col-sm-6 d-flex justify-content-center">
+            <!-- UTILIZO O M-O PARA QUE O H1 OCUPE TODO O ESPAÇO E USO A CLASSE tituloNavbar PARA DEIXAR O TÍTULO BRANCO, POIS COMO O FUNDO DA PÁGINA É BRANCO ELE DEVERÁ SER PRETO NOS OUTROS -->
+            <h1 class="m-0 tituloNavbar mt-3"><a href="../../index.html">ESCANEIA NEVES</a></h1>
+          </div>
+          <!-- COLUNA QUE IRÁ OCUPAR 1/4 DO CONTAINER, ONDE FICARÁ O BOTÃO DE MENU -->
+          <div class="col-sm-3 d-flex justify-content-end">
+            <!-- ÍCONE NATIVO DO BOOTSTRAP, APENAS ALTEREI O ATRIBUTO FILL COM A COR WHITE -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="white"
+              class="bi bi-justify"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
     </nav>
-    <h2>Movimento Cultural em Neves</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa officiis,
-      maiores reprehenderit harum maxime veritatis voluptates. Fuga dolorem
-      sapiente inventore adipisci libero quisquam debitis? Atque minima totam
-      excepturi culpa ex magni temporibus quasi, dolores perspiciatis tenetur
-      blanditiis minus voluptates pariatur? ipsum dolor sit amet consectetur
-      adipisicing elit. Impedit consequuntur, vero molestiae distinctio eius
-      amet earum doloremque quae cum in magni nesciunt nisi odio facere ad
-      tempore quibusdam obcaecati aperiam.
-    </p>
-    <table>
-      <tr>
-        <td>
-          <a href="catolicismo.html"
-            ><img
-              src="https://www.ipatrimonio.org/wp-content/uploads/2018/11/ipatrimonio_Ribeir%C3%A3o-das-Neves-Campan%C3%A1rio-e-Cruzeiro-da-Matriz-de-Nossa-Senhora-da-Piedade_imagem_Google-Street-View.jpg"
-              ,
-              width="300"
-          /></a>
-        </td>
-        <td></td>
-        <td>
-          <a href="esportes.html"
-            ><img
-              src="https://static.todamateria.com.br/upload/ti/po/tipos-de-esporte-og.jpg"
-              ,
-              width="300"
-          /></a>
-        </td>
-        <td></td>
-        <td>
-          <a href="educacao.html"
-            ><img
-              src="https://www.ifmg.edu.br/ribeiraodasneves/noticias/campus-ribeirao-das-neves-bate-recorde-historico-em-numero-de-inscritos-para-o-processo-seletivo/pxl_20221204_152501290.jpg"
-              ,
-              width="300"
-          /></a>
-        </td>
-      </tr>
-      <tr>
-        <td><h2>Catolicismo</h2></td>
-        <td></td>
-        <td><h2>Esportes</h2></td>
-        <td></td>
-        <td><h2>Educação</h2></td>
-      </tr>
-    </table>
+
+    <div class="container-fluid">
+      <div class="row ">
+        <div class="col ">
+          <h2>Movimento Cultural em Neves</h2>
+        </div>
+      </div>
+
+      <div class="row ">
+        <div class="col ">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+            officiis, maiores reprehenderit harum maxime veritatis voluptates.
+            Fuga dolorem sapiente inventore adipisci libero quisquam debitis?
+            Atque minima totam excepturi culpa ex magni temporibus quasi,
+            dolores perspiciatis tenetur blanditiis minus voluptates pariatur?
+            ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            consequuntur, vero molestiae distinctio eius amet earum doloremque
+            quae cum in magni nesciunt nisi odio facere ad tempore quibusdam
+            obcaecati aperiam.
+          </p>
+        </div>
+      </div>
+
+      <center>
+        <div class="row  mt-5">
+          <div class="col ">
+            <a href="artes.html"
+              ><img
+                src="https://imgsapp.em.com.br/app/noticia_127983242361/2015/09/25/691812/20150925074132580603i.jpg"
+                class="img-fluid"
+              />
+            </a>
+            <h2>Artes</h2>
+          </div>
+          <div class="col "></div>
+        </div>
+
+        <div class="row  mt-5">
+          <div class="col "></div>
+          <div class="col ">
+            <a href="capoeira.html"
+              ><img
+                src="https://eqbra69q69i.exactdn.com/wp-content/uploads/2017/05/benefi%CC%81cios-da-capoeira.jpg?strip=all&lossy=1&quality=75&avif=75&sharp=1&ssl=1"
+                class="img-fluid"
+              />
+            </a>
+            <h2>Capoeira</h2>
+          </div>
+        </div>
+
+        <div class="row  mt-5">
+          <div class="col ">
+            <a href="catolicismo.html"
+              ><img
+                src="https://www.ipatrimonio.org/wp-content/uploads/2018/11/ipatrimonio_Ribeir%C3%A3o-das-Neves-Campan%C3%A1rio-e-Cruzeiro-da-Matriz-de-Nossa-Senhora-da-Piedade_imagem_Google-Street-View.jpg"
+                class="img-fluid"
+              />
+            </a>
+            <h2>Catolicismo</h2>
+          </div>
+          <div class="col "></div>
+        </div>
+
+        <div class="row  mt-5">
+          <div class="col "></div>
+          <div class="col ">
+            <a href="educacao.html"
+              ><img
+              src="https://diariomsnews.com.br/wp-content/uploads/2022/08/tipo-de-educacao.jpg"
+              class="img-fluid"
+              />
+            </a>
+            <h2>Educação</h2>
+          </div>
+        </div>
+
+        <div class="row  mt-5">
+          <div class="col ">
+            <a href="esportes.html"
+              ><img
+                src="https://static.todamateria.com.br/upload/ti/po/tipos-de-esporte-og.jpg"
+                class="img-fluid"
+              />
+            </a>
+            <h2>Esportes</h2>
+          </div>
+          <div class="col "></div>
+        </div>
+
+        <div class="row  mt-5">
+          <div class="col "></div>
+          <div class="col ">
+            <a href="rap.html"
+              ><img
+                src="https://www.fflch.usp.br/sites/fflch.usp.br/files/2020-11/rap.png"
+                class="img-fluid"
+              />
+            </a>
+            <h2>Rap</h2>
+          </div>
+        </div>
+      </center>
+    </div>
   </body>
 </html>
-
