@@ -9,6 +9,8 @@ O projeto Escaneia Neves consiste na criação de um site de divulgação inform
 
 ![imagem](https://i.imgur.com/jEIg7MF.png)
 
+## Como navegar?
+Da página index do projeto, é possível ver notícias de Ribeirão das Neves passando de forma automática ou com um clique nas setas de "próximo" e "anterior" no carrossel de notícias. Ao clicar no botão escrito "Ver manifestações culturais" abaixo da primeira imagem da página index, o usuário é redirecionado a página inicial da parte cultural, onde poderá acessar as seis páginas de manifestações que nosso projeto até então possui clicando na imagem de cada manifestação cultural. Desse modo, o usuário pode acessar cada uma dessas páginas, podendo retornar para a tela inicial da parte cultural pelo botão de voltar da navbar do cabeçalho de cada página de manifestação cultural. Além disso, sempre que o usuário clicar no "Escaneia Neves" das navbar's, ele será redirecionado a página index do projeto.
 
 ## Funcionalidades Principais
 1.	Escanear QR Codes
