@@ -1,61 +1,127 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.7/css/bootstrap.min.css" integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="estilo.css">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.7/css/bootstrap.min.css"
+      integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="estiloPaginaCultural.css" />
+  </head>
 
-    </head>
+  <body>
+      <nav class="navbar bg-body-tertiary">
 
+        <!-- CONTAINER QUE NOS PROPORCIONARÁ A RESPONSIVIDADE DA NAVBAR (IRÁ OCUPAR TODO O ESPAÇO) -->
 
-    <body>
+        <div class="container-fluid corNavbar posicaoNavbar">
+          <!-- DEFININDO UMA LINHA QUE IRÁ OCUPAR TODO O CONTAINER E QUE IRÁ AJUSTAR SEUS ITENS NO CENTRO JUNTO AO TEXTO -->
+          <div class="row w-100 align-items-center text-center">
+            <!-- DEFININDO UMA COLUNA QUE IRÁ OCUPAR APENAS 1/4 DO TAMANHO TOTAL DO CONTAINER E QUE IRÁ FICAR CENTRALIZADO PARA POSICIONAR O BOTÃO DE VOLTAR AO INDEX -->
+            <div class ="col-sm-3 d-flex justify-content-start">
+              <!-- LINK QUE FARÁ A NAVEGAÇÃO DA PÁGINA DE ESPORTES PARA A PÁGINA PRINCIPAL CULTURAL -->
+              <a class="navbar-brand" href="inicialCultural.html">
+                
+                <!-- ICON DE SETA NATIVO DO BOOTSTRAP -->
+                <!-- OBS: NO ATRIBUTO FILL COLOCO A COR WHITE -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
+                </svg>
+        
+              </a>
 
+            </div>
+            <!-- COLUNA QUE IRÁ OCUPAR 1/2 DO CONTAINER E POSICIONA OS SEUS ELEMENTOS CENTRALIZADOS -->
+            <div class="col-sm-6 d-flex justify-content-center">
+              <!-- UTILIZO O M-O PARA QUE O H1 OCUPE TODO O ESPAÇO E USO A CLASSE tituloNavbar PARA DEIXAR O TÍTULO BRANCO, POIS COMO O FUNDO DA PÁGINA É BRANCO ELE DEVERÁ SER PRETO NOS OUTROS -->
+              <a href="../../index.html"><h1 class="m-0 tituloNavbar">ESCANEIA NEVES</h1></a>
+            </div>
+            <!-- COLUNA QUE IRÁ OCUPAR 1/4 DO CONTAINER, ONDE FICARÁ O BOTÃO DE MENU -->
+            <div class="col-sm-3 d-flex justify-content-end">
+              
+              <!-- ÍCONE NATIVO DO BOOTSTRAP, APENAS ALTEREI O ATRIBUTO FILL COM A COR WHITE -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-justify" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+              </svg>
 
- <nav class="navbar fixed-top bg-success" class="espacoNav">
-      <div class="container">
-        <a class="navbar-brand" href="teste.html">
-          <img src="/images/setaVoltar.png" class="img-fluid float-start" width="50">
-        </a>
-          <h1 class = "textoComBorda2"> <a href = "index.html">Escaneia Neves</a></h1>
-          <!-- Modifiquei o titulo para deixar ele original do html, com as fontes do DonGraffiti -->
-        <a>
-          <img src="/images/botaoMenu.png" class="img-fluid float-end" width="50"></a>
-      
+            </div>
+
+           
           
+          </div>
+        </div>
+
+
+
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row ">
+        <div class="col ">
+          
+        </div>
+      </div>
+
+
+
+      <center>
+        <div class="row  mt-5">
+          <div class="col ">
+            <img
+              src="https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/u63/15_01_22_capoeira_interna.jpg"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </center>
+
+      <center>
+        <div class="row mt-4">
+          <div class="col ">
+            <h1>CAPOEIRA EM NEVES E SUAS MOVIMENTAÇÕES</h1>
+          </div>
+        </div>
+      </center>
+
+      <center>
+        <div class="row ">
+          <div class="col ">
+            <p class="text-center">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
+            obcaecati corrupti aperiam dignissimos quisquam pariatur excepturi
+            illum quidem nemo, aliquam incidunt quis reiciendis numquam tempora
+            dolore eius rem officia hic labore velit repudiandae accusamus
+            quaerat, inventore autem. Ab accusantium consectetur libero id
+            magni, facere hic optio itaque iure quod a nisi molestias eos
+            facilis. Veniam est ratione alias? Consequatur officiis reiciendis
+            tenetur optio, velit eum ex sint non. Sapiente, ipsam ullam placeat
+            asperiores laudantium quam soluta laboriosam dignissimos dolorem
+            quasi exercitationem labore facere distinctio quos molestiae, dolore
+            architecto, obcaecati iure quidem explicabo? Illo provident ea at
+            dolorum, quasi tenetur esse!
+          </p>
+        </div>
+      </center>
+
+      <center>
+      <div class="row  mt-5">
+        <div class="col ">
+          <h2>CAPOEIRA BRASIL DAS GERAIS</h2>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ84abdxvoNZ2Eu3TJWPiGc7tVUBSpfW7IL7w&s" class="img-fluid" width="450">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quas voluptates incidunt fuga fugit ex, labore reprehenderit laudantium totam libero deserunt quo? Aut aspernatur, quibusdam odio a odit laboriosam amet?</p>
+        </div>
+        <div class="col ">
+          <h2>CAPOEIRA MARÉ DE MARÇO</h2>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHenEOHZpe9Kz71C-zhNPOn4T3VOHzj_MeAw&s" class="img-fluid" width="400">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quas voluptates incidunt fuga fugit ex, labore reprehenderit laudantium totam libero deserunt quo? Aut aspernatur, quibusdam odio a odit laboriosam amet?</p>      
+        </div>
+      </div>
+      </center>
+     
     </div>
-</nav>
 
 
-<img src="/images/Captura_de_tela_2025-08-24_191007-removebg-preview.png" class="titulo">
-
-<img src="/images/capoeira.png" class="foto01" width="800">
-
-<img src="/images/capoeira2.png" class="foto02"  width="800">
-
-
-
-
-
-<div class="primeiroTopico">
-  <p class="text-center"> <b>Capoeira em Neves e suas movimentações</b></p>
-  <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor obcaecati corrupti aperiam dignissimos quisquam pariatur excepturi illum quidem nemo, aliquam incidunt quis reiciendis numquam tempora dolore eius rem officia hic labore velit repudiandae accusamus quaerat, inventore autem. Ab accusantium consectetur libero id magni, facere hic optio itaque iure quod a nisi molestias eos facilis. Veniam est ratione alias? Consequatur officiis reiciendis tenetur optio, velit eum ex sint non. Sapiente, ipsam ullam placeat asperiores laudantium quam soluta laboriosam dignissimos dolorem quasi exercitationem labore facere distinctio quos molestiae, dolore architecto, obcaecati iure quidem explicabo? Illo provident ea at dolorum, quasi tenetur esse!</p>
-
-</div>
-
-<div class="segundoTopico">
-  <p class="text-center"> <b>CAPOEIRA BRASIL DAS GERAIS </b> </p>
-
-</div>
-
-<div class="terceiroTopico">
-
-  <p class="text-center"> <b>CAPOEIRA MARÉ DE MARÇO</b></p>.
-   
-</div>
-
-<div class = "quartoTopico">
-    <p class = "text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor obcaecati corrupti aperiam dignissimos quisquam pariatur excepturi illum quidem nemo, aliquam incidunt quis reiciendis numquam tempora dolore eius rem officia hic labore velit repudiandae accusamus quaerat, inventore autem. Ab accusantium consectetur libero id magni, facere hic optio itaque iure quod a nisi molestias eos facilis. Veniam est ratione alias? Consequatur officiis reiciendis tenetur optio, velit eum ex sint non. Sapiente, ipsam ullam placeat asperiores laudantium quam soluta laboriosam dignissimos dolorem quasi exercitationem labore facere distinctio quos molestiae, dolore architecto, obcaecati iure quidem explicabo? Illo provident ea at dolorum, quasi tenetur esse!</p>
-</div>
-<!-- Adicionei mais um topico com o intuito de descrever as escolas de capoeira em Neves -->
-
+    <!-- Adicionei mais um topico com o intuito de descrever as escolas de capoeira em Neves -->
   </body>
 </html>
-
