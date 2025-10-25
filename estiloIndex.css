@@ -13,6 +13,10 @@ h1 {
   font-size: 70pt;
 }
 
+h2 {
+  font-size: 30pt;
+}
+
 /* Acessando as tags img que são "filhas" de elementos com a classe "carousel-item" que por sua vez são "filhas" de elementos com a classe "carousel-inner, iremos
    manter essa proporção de preenchimento da página.'*/
 .carousel-inner > .carousel-item > img {
