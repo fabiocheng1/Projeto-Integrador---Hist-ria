@@ -1,6 +1,10 @@
 /* Importando fonte do google fontes */
 @import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
 
+body{
+  padding: 30pt;
+}
+
 h1 {
   /* Fazendo a fonte dos H1 ser a mesma fonte que "importei" do google fontes lá no início desse arquivo de estilo*/
   font-family: "Sedgwick Ave Display";
