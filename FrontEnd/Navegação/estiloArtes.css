@@ -3,13 +3,14 @@
 
 /* DEFININDO TODOS OS H1'S DO PROJETO COM A SEGUINTE FONTE */
 
-h1{
+h2{
     font-family: Sedgwick Ave Display;
     
 }
 
-
-
+body {
+    font-size: 27px;
+  }
 
 
 /* CONFIGURAÇÃO DA NAVBAR: */
