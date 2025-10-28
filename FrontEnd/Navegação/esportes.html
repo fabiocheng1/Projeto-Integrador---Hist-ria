@@ -16,11 +16,11 @@
   <body>
     
     <!-- NAVBAR DA PÁGINA -->
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar sticky-top bg-body-tertiary">
 
         <!-- CONTAINER QUE NOS PROPORCIONARÁ A RESPONSIVIDADE DA NAVBAR (IRÁ OCUPAR TODO O ESPAÇO) -->
 
-        <div class="container-fluid corNavbar posicaoNavbar">
+        <div class="container-fluid corNavbar posicaoNavbar tamanhoNavBar ">
           <!-- DEFININDO UMA LINHA QUE IRÁ OCUPAR TODO O CONTAINER E QUE IRÁ AJUSTAR SEUS ITENS NO CENTRO JUNTO AO TEXTO -->
           <div class="row w-100 align-items-center text-center">
             <!-- DEFININDO UMA COLUNA QUE IRÁ OCUPAR APENAS 1/4 DO TAMANHO TOTAL DO CONTAINER E QUE IRÁ FICAR CENTRALIZADO PARA POSICIONAR O BOTÃO DE VOLTAR AO INDEX -->
@@ -70,14 +70,19 @@
       <div class="row">
 
         <!-- INSIRO UMA COLUNA OCUPANDO 1/2 DO CONTAINER PARA ALINHAR À ESQUERDA -->
-        <div class="col-sm-6 d-flex justify-content-start">
+        <div class="col-sm-12 d-flex justify-content-start ">
 
           <!-- IMAGEM COM LINK ABSOLUTO COM A CLASSE ROUNDED PARA DEIXAR AS BORDAS ARREDONDADAS, A CLASSE INTERNA IMAGEM PARA DEFINIR SEU PADDING E DEFINO O WIDHT EM PT PARA SE AJUSTAR À TELA -->
-          <img src="https://ribeiraodasneves.mg.gov.br/wp-content/uploads/2023/06/BA8CBA0B-375D-BA7E-2AED-AEDDB8A633AB-e1686939572264.jpeg" class="rounded imagem" width="430pt">
+          <img src="https://ribeiraodasneves.mg.gov.br/wp-content/uploads/2023/06/BA8CBA0B-375D-BA7E-2AED-AEDDB8A633AB-e1686939572264.jpeg" class="rounded img-fluid imagem w-100">
         </div>
 
+      </div>
+
+
+      <div class="row">
+
         <!-- OUTRA COLUNA QUE IRÁ FICAR A DIREITA E TERÁ UM FLEX-COLUMN PARA ALINHAR OS ELEMENTOS TEXTUAIS VERTICALMENTE -->
-        <div class="col-sm-6 d-flex flex-column align-items-center justify-content-start">
+        <div class="col-sm-12 d-flex flex-column align-items-center justify-content-start">
           
           <!-- M-0 PARA AUXILIAR NO ESPAÇO QUE O H1 IRÁ OCUPAR -->
           <h1 class="m-0">
@@ -85,14 +90,14 @@
           </h1>
 
           <!-- CLASSE TEXT-CENTER PARA CENTRALIZAR O TEXTO -->
-          <p class="text-center">
+          <p class="text-center fs-2">
             <!-- USO A TAG B PARA DEIXAR EM NEGRITO E CRIAR UM SUBTÍTULO -->
             <b>PRIMEIRAS MANIFESTAÇÕES E PRINCIAPIS MODALIDADES</b>
                  
           </p>
 
           <!-- TEXTO USADO COMO EXEMPLO JUNTO À CLASSE TEXT-CENTER PARA ALINHAR OS ELEMENTOS -->
-          <p class="text-center ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione deserunt dolorum quos hic consectetur, pariatur cumque! Cumque perferendis expedita error architecto laudantium illum ex explicabo, cum quaerat consectetur eligendi ducimus.</p>
+          <p class="text-center fs-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione deserunt dolorum quos hic consectetur, pariatur cumque! Cumque perferendis expedita error architecto laudantium illum ex explicabo, cum quaerat consectetur eligendi ducimus.</p>
         </div>
       
         
@@ -103,7 +108,12 @@
 
       <!-- LINHA VAZIA PARA QUE EU POSSA UTILIZAR O ESPAÇO DO CONTAINER DE UMA FORMA MAIS BEM DISPOSTA -->
       <div class="row">
-      </div>
+
+        <div class="col-sm-12"></div>
+
+          <img src="https://ribeiraodasneves.net/midia/imagens/2023-10/01-alissonslackpro.jpg" class="rounded imagem w-100">
+
+        </div>
 
 
       <!-- OUTRA LINHA PARA POSICIONAR OS ÚLTIMOS ELEMENTOS -->
@@ -111,37 +121,32 @@
 
 
         <!-- OCUPO METADE DO CONTAINER NA HORIZONTAL E USO FLEX-COLUMN PARA AJUSTAR TODO O TEXTO -->
-        <div class="col-sm-6 d-flex flex-column align-items-center justify-content-start">
+        <div class="col-sm-12 d-flex flex-column align-items-center justify-content-start">
 
           <!-- CLASSE TEXT-CENTER PARA CENTRALIZAR O TEXTO -->
-          <p class="text-center">
+          <p class="text-center fs-2">
              <!-- USO A TAG B PARA DEIXAR EM NEGRITO E CRIAR UM SUBTÍTULO -->
             <b>PRINCIPAIS ESPORTISTAS E MODALIDADES OFERECIDAS</b>
           </p>
 
            <!-- CLASSE TEXT-CENTER PARA CENTRALIZAR O TEXTO -->
-          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident in asperiores eveniet sint fugiat quibusdam, accusamus enim quis neque, repellat adipisci. Maiores, error voluptatibus perspiciatis suscipit dignissimos totam quisquam!</p>
+          <p class="text-center fs-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident in asperiores eveniet sint fugiat quibusdam, accusamus enim quis neque, repellat adipisci. Maiores, error voluptatibus perspiciatis suscipit dignissimos totam quisquam!</p>
 
            <!-- CLASSE TEXT-CENTER PARA CENTRALIZAR O TEXTO -->
-          <p class="text-center">
+          <p class="text-center fs-2">
              <!-- USO A TAG B PARA DEIXAR EM NEGRITO E CRIAR UM SUBTÍTULO -->
             <b>LOCAIS ONDE OCORRE</b>
           </p>
 
           <!-- CLASSE TEXT-CENTER PARA CENTRALIZAR O TEXTO -->
-          <p class="text-center">
+          <p class="text-center fs-2">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque dolor inventore, iure adipisci expedita eligendi dolores quis esse ab distinctio velit harum eius suscipit ullam. Corporis corrupti ipsam delectus cumque.
           </p>
 
         </div>
 
 
-        <!-- CRIO OUTRA COLUNA PARA OCUPAR A PARTE DA DIREITA DA PÁGINA PARA AJUSTAR OS RECURSOS DE IMAGEM -->
-        <div class="col-sm-6 d-flex flex-column align-items-center justify-content-end">
-
-          <!-- USO A IMAGEM COM UM LINK ABSOLUTO E CLASSES PARA DEIXAR SUAS BORDAS ARREDONDADAS E AJUSTAR O PADDING -->
-          <img src="https://ribeiraodasneves.net/midia/imagens/2023-10/01-alissonslackpro.jpg" class="rounded imagem" width="400">
-        </div>
+        
 
       </div>
 
@@ -166,6 +171,14 @@
 
     </div>
 
+    <footer class="py-3 my-5">
+
+      <p class="text-center text-body-secondary">© 2025 Escaneia Neves, Inc</p>
+
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+   
+      
+    </footer>
 
 
 

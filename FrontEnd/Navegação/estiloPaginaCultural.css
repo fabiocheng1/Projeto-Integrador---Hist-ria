@@ -7,6 +7,13 @@
 
 /* DEFININDO TODOS OS H1'S DO PROJETO COM A SEGUINTE FONTE */
 
+
+/* PADDING DA PÁGINA */
+body{
+
+    padding: 40pt;
+}
+
 h1, h2{
     font-family: Sedgwick Ave Display;
     
@@ -42,12 +49,21 @@ img {
     margin-top: -6pt;
 }
 
+/* ALTERO O TAMANHO DA NAVABR */
+
+
+.tamanhoNavbar{
+    padding: 10pt;
+    
+    
+}
+
 
 
 /* CONFIGURAÇÃO DE ESPAÇAMENTO DAS IMAGENS DA PÁGINA */
 
 .Imagem{
-    padding: 10pt;
+    padding: 12pt;
 }
 
 /* -= ESTILIZAÇÃO PÁGINA ARTES - CALTON =- */
