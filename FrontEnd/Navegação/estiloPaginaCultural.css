@@ -9,7 +9,7 @@
 
 
 /* PADDING DA PÁGINA */
-body{
+.pading{
 
     padding: 40pt;
 }
@@ -37,6 +37,7 @@ img {
 .tituloNavbar{
     font-family: Sedgwick Ave Display;
     color: white;
+    font-size: 40pt;
 }
 
 /* DEFININDO A COR DE FUNDO DA NAVBAR PARA A DESEJADA */
