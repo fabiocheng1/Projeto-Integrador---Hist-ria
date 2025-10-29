@@ -161,9 +161,14 @@ img {
     bottom: 260;
     right: 30;
 }
+.mt-0{
+    margin-left: 20pt;
+    margin-right: 20pt;
+}
 
 /* -= ESTILIZAÇÃO PÁGINA ESPORTES - RAFAEL =- */
 /* Mesma coisa que a base */
 
 /* -= ESTILIZAÇÃO PÁGINA RAP - YANK =- */
 /* Mesma coisa que a base */
+
