@@ -38,7 +38,7 @@ h1, h2{
 }
 
 a {
-        text-decoration: none; 
+        text-decoration: none !important; 
         color: inherit; 
     }
 
@@ -197,6 +197,7 @@ img {
 
 /* -= ESTILIZAÇÃO PÁGINA RAP - YANK =- */
 /* Mesma coisa que a base */
+
 
 
 
