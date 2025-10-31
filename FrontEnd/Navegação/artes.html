@@ -1,90 +1,186 @@
 <html>
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.7/css/bootstrap.min.css" integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="estilo.css">
-  <title>Arte e Cultura em Ribeirão das Neves</title>
-  <link rel="stylesheet" href="estiloPaginaCultural.css">
 
-  
-  <style>
-    body {
-      font-size: 30px; 
-      margin: 40px; 
-    }
+    <head>
+        <link rel="stylesheet" href="estiloPaginaCultural.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    p {
-      margin-bottom: 20px; 
-    }
+    </head>
 
-    h2 {
-      margin-top: 40px;
-      margin-bottom: 20px;
-    }
+    <body>
+        
+        <nav class="navbar sticky-top bg-body-tertiary">
 
-    img {
-      margin: 20px 0; 
-      border-radius: 10px; 
-    }
-  </style>
-</head>
+            <div class="container-fluid corNavbar posicaoNavbar tamanhoNavBar ">
+              <!-- DEFININDO UMA LINHA QUE IRÁ OCUPAR TODO O CONTAINER E QUE IRÁ AJUSTAR SEUS ITENS NO CENTRO JUNTO AO TEXTO -->
+              <div class="row w-100 align-items-center text-center">
+                <!-- DEFININDO UMA COLUNA QUE IRÁ OCUPAR APENAS 1/4 DO TAMANHO TOTAL DO CONTAINER E QUE IRÁ FICAR CENTRALIZADO PARA POSICIONAR O BOTÃO DE VOLTAR AO INDEX -->
+                <div class ="col-sm-3 d-flex justify-content-start">
+                  <!-- LINK QUE FARÁ A NAVEGAÇÃO DA PÁGINA DE ESPORTES PARA A PÁGINA PRINCIPAL CULTURAL -->
+                    <a class="navbar-brand" href="inicialCultural.html">
+                    
+                    <!-- ICON DE SETA NATIVO DO BOOTSTRAP -->
+                    <!-- OBS: NO ATRIBUTO FILL COLOCO A COR WHITE -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
+                    </svg>
+            
+                    </a>
+    
+                </div>
+    
+                <!-- COLUNA QUE IRÁ OCUPAR 1/2 DO CONTAINER E POSICIONA OS SEUS ELEMENTOS CENTRALIZADOS -->
+                <div class="col-sm-6 d-flex justify-content-center">
+                  <!-- UTILIZO O M-O PARA QUE O H1 OCUPE TODO O ESPAÇO E USO A CLASSE tituloNavbar PARA DEIXAR O TÍTULO BRANCO, POIS COMO O FUNDO DA PÁGINA É BRANCO ELE DEVERÁ SER PRETO NOS OUTROS -->
+                  <a href="../../index.html"><h1 class="m-0 tituloNavbar mt-3 mb-3">ESCANEIA NEVES</h1></a>
+                </div>
+    
+                <!-- COLUNA QUE IRÁ OCUPAR 1/4 DO CONTAINER, ONDE FICARÁ O BOTÃO DE MENU -->
+                <div class="col-sm-3 d-flex justify-content-end">
+                  
+                  <!-- ÍCONE NATIVO DO BOOTSTRAP, APENAS ALTEREI O ATRIBUTO FILL COM A COR WHITE -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+    
+                </div>
+    
+               
+              
+              </div>
+            </div>
+    
+    
+    
+          </div>
+        </nav>
 
-<body>
-  
-  <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid corNavbar posicaoNavbar">
-      <div class="row w-100 align-items-center text-center">
-        <div class="col-sm-3 d-flex justify-content-start">
-          <a class="navbar-brand" href="inicialCultural.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
-            </svg>
-          </a>
+
+    <div class="container-fluid pading">   
+
+        <!-- CRIO UMA LINHA PARA POSICIONAR OS ELEMENTOS A PARTIR  -->
+        <div class="row">
+
+            <!-- INSIRO UMA COLUNA OCUPANDO TUDO DO CONTAINER PARA ALINHAR À ESQUERDA -->
+            <div class="col-sm-12 d-flex justify-content-center ">
+
+            <!-- IMAGEM COM LINK ABSOLUTO COM A CLASSE ROUNDED PARA DEIXAR AS BORDAS ARREDONDADAS, A CLASSE INTERNA IMAGEM PARA DEFINIR SEU PADDING E DEFINO O WIDHT EM PT PARA SE AJUSTAR À TELA -->
+                <img src="https://conteudo.imguol.com.br/c/noticias/74/2016/12/15/15dez2016---fachada-de-casa-invertida-situada-na-cidade-de-ribeirao-das-neves-na-regiao-metropolitana-de-belo-horizonte-o-teto-parece-ter-sido-enfiado-no-terreno-enquanto-ha-ate-um-cachorro-de-1481831587940_300x200.jpg.webp" class="rounded img-fluid imagem w-100">
+            </div>
+
         </div>
 
-        <div class="col-sm-6 d-flex justify-content-center">
-          <a href="../../index.html"><h1 class="m-0 tituloNavbar">ESCANEIA NEVES</h1></a>
+
+        <div class="row">
+
+            <div class="col-sm-12 d-flex justify-content-center">
+
+                <h1>Casa Invertida – Ribeirão das Neves</h1>
+
+
+            </div>
+
+            
         </div>
 
-        <div class="col-sm-3 d-flex justify-content-end">
-         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search" viewBox="0 0 16 16">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-        </svg>
+        <div class="row">
+
+            <div class="col-sm-12 d-flex justify-content-center">
+
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, mollitia aperiam quod tenetur illum id sapiente facilis consequatur totam repellat animi accusantium error laboriosam! Exercitationem neque deleniti ullam odit autem!</p>
+
+
+            </div>
+
+
         </div>
-      </div>
+
+        <div class="row">
+
+            <div class="col-sm-12">
+                <h1 class="text-center">Grupos de Congado e Folia de Reis – Guardas Tradicionais </h1>            
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-sm-12">
+                <img src="https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2024/06/Foto-Prefeitura-de-Ribeir%C3%A3o-das-Neves-1.png" class="img-fluid float-end w-100" width="800">
+            </div>
+            
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <p class="text-center">Em Ribeirão das Neves, os grupos de Congado e Folia de Reis preservam tradições culturais e religiosas locais.
+                No Congado, celebram-se santos como Nossa Senhora do Rosário com danças, cantos e percussão de origem afro-brasileira.
+                A Folia de Reis relembra a visita dos Três Reis Magos a Jesus, com músicas e apresentações pelas comunidades.
+                Esses grupos atuam como guardiões das tradições, mantendo vivas as manifestações culturais e fortalecendo a identidade da cidade. </p>
+
+            </div>
+
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-12">
+                <h1 class="text-center">Leonardo Snake</h1>
+            </div>
+
+
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="https://ribeiraodasneves.net/midia/imagens/2021-04/23-leonardo-snake.jpg" class="img-fluid float-end w-100" width="500">
+            </div>
+
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-12">
+                <p class="text-center">Em Ribeirão das Neves, Leonardo Snake é um grafiteiro e tatuador reconhecido por transformar espaços públicos com seus murais de grande dimensão. Ele é um dos responsáveis pelo projeto “Mural em Justinópolis”, que leva arte urbana para diferentes pontos da cidade, valorizando a cultura local e aproximando a comunidade da arte.
+    Seus trabalhos são marcados por cores vibrantes, detalhes elaborados e temáticas que dialogam com a identidade da cidade. Além disso, ele também atua como tatuador, refletindo seu estilo de pintura em trabalhos corporais.
+    O impacto do seu trabalho é sentido tanto esteticamente, em muros e fachadas, quanto socialmente, ao incentivar a valorização da arte urbana entre jovens e moradores.</p>
+
+
+            </div>
+
+
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <img src="https://www.agendabh.com.br/wp-content/uploads/image_carousel_thumbs/divulgacao-7-990x344-p5ao463uzjeygchtnpdv5xm38bs9nr37vunv406ymk.jpeg" class="img-fluid float-end w-100 " width="500">
+
+
+            </div>
+
+        </div>
+
+
+
     </div>
-  </nav>
 
-  <div class="pading">
-    <nav>
-      <div class="col-sm-6 d-flex flex-column align-items-center justify-content-start">
-        <h2 class="m-0 mb-5">Artes</h2>
-      </div>
-    </nav>
 
-    <img src="https://conteudo.imguol.com.br/c/noticias/74/2016/12/15/15dez2016---fachada-de-casa-invertida-situada-na-cidade-de-ribeirao-das-neves-na-regiao-metropolitana-de-belo-horizonte-o-teto-parece-ter-sido-enfiado-no-terreno-enquanto-ha-ate-um-cachorro-de-1481831587940_300x200.jpg.webp" class="img-fluid" width="500">
-    <h2>Casa Invertida – Ribeirão das Neves</h2>
-    <p>A Casa Invertida é uma das atrações mais curiosas de Ribeirão das Neves, na Região Metropolitana de Belo Horizonte. Construída entre 2008 e 2011 pelo aposentado Eduardo José Lima, a casa foi projetada de forma totalmente fora do comum: o telhado fica no chão, as janelas estão de ponta-cabeça e, no interior, móveis como mesas, tapetes e até uma pia aparecem fixados no teto.</p>
-    <p>Localizada em um terreno de mais de 10 mil m², no bairro Granja Primaveras, a casa rapidamente se tornou ponto turístico e cartão-postal da cidade. Além da construção inusitada, o espaço conta com piscina, churrasqueira, gramado e áreas de lazer, sendo também usado para eventos e encontros.</p>
-    <p>Com sua aparência única e divertida, a Casa Invertida atrai visitantes que buscam registrar fotos diferentes e conhecer de perto uma das obras arquitetônicas mais criativas de Minas Gerais.</p>
-    <p>Endereço: Rua Serra Negra, Granja Primaveras – Ribeirão das Neves, MG</p>
 
-    <h2>Grupos de Congado e Folia de Reis – Guardas Tradicionais</h2>
-    <img src="https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2024/06/Foto-Prefeitura-de-Ribeir%C3%A3o-das-Neves-1.png" class="img-fluid float-end" width="800">
-    <p>Em Ribeirão das Neves, os grupos de Congado e Folia de Reis preservam tradições culturais e religiosas locais.</p>
-    <p>No Congado, celebram-se santos como Nossa Senhora do Rosário com danças, cantos e percussão de origem afro-brasileira.</p>
-    <p>A Folia de Reis relembra a visita dos Três Reis Magos a Jesus, com músicas e apresentações pelas comunidades.</p>
-    <p>Esses grupos atuam como guardiões das tradições, mantendo vivas as manifestações culturais e fortalecendo a identidade da cidade.</p>
 
-    <h2>🎨 Leonardo Snake</h2>
-    <img src="https://ribeiraodasneves.net/midia/imagens/2021-04/23-leonardo-snake.jpg" class="img-fluid float-end" width="500">
-    <p>Em Ribeirão das Neves, Leonardo Snake é um grafiteiro e tatuador reconhecido por transformar espaços públicos com seus murais de grande dimensão.</p>
-    <p>Ele é um dos responsáveis pelo projeto “Mural em Justinópolis”, que leva arte urbana para diferentes pontos da cidade, valorizando a cultura local e aproximando a comunidade da arte.</p>
-    <p>Seus trabalhos são marcados por cores vibrantes, detalhes elaborados e temáticas que dialogam com a identidade da cidade. Além disso, ele também atua como tatuador, refletindo seu estilo de pintura em trabalhos corporais.</p>
-    <p>O impacto do seu trabalho é sentido tanto esteticamente, em muros e fachadas, quanto socialmente, ao incentivar a valorização da arte urbana entre jovens e moradores.</p>
-    <img src="https://www.agendabh.com.br/wp-content/uploads/image_carousel_thumbs/divulgacao-7-990x344-p5ao463uzjeygchtnpdv5xm38bs9nr37vunv406ymk.jpeg" class="img-fluid float-end" width="500">
 
-    <p>2025 - Cultura de Ribeirão das Neves</p>
-  </div>
-</body>
+
+    </body>
+
+
+
+
+
 </html>
-
