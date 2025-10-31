@@ -14,6 +14,10 @@
     padding: 40pt;
 }
 
+p{
+    font-size: 20pt;
+}
+
 h1, h2{
     font-family: Sedgwick Ave Display;
     font-size : 40pt;
@@ -174,6 +178,7 @@ img {
 
 /* -= ESTILIZAÇÃO PÁGINA RAP - YANK =- */
 /* Mesma coisa que a base */
+
 
 
 
