@@ -4,19 +4,20 @@
 /* IMPORTANDO A FONTE DA WEB */
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 
+
 body{
-     background-image: url('https://i.ibb.co/35Tt2KR1/Design-sem-nome.png');
-     background-repeat: no-repeat; 
+    background-image: url('https://i.ibb.co/35Tt2KR1/Design-sem-nome.png');
+    background-repeat: no-repeat; 
 
-    
-     background-size: cover; 
+   
+    background-size: cover; 
 
-     background-position: center;
+    background-position: center;
 
-     background-attachment: fixed;
+    background-attachment: fixed;
 
-     min-height: 100vh;
-     margin: 0; 
+    min-height: 100vh;
+    margin: 0; 
 }
 
 /* DEFININDO TODOS OS H1'S DO PROJETO COM A SEGUINTE FONTE */
@@ -38,7 +39,7 @@ h1, h2{
 }
 
 a {
-        text-decoration: none !important; 
+        text-decoration: none !important;
         color: inherit; 
     }
 
@@ -77,17 +78,16 @@ img {
     
 }
 
+/* CONFIGURAÇÃO DO FOOTER */
 
+.corFooter{
+    background-color:#00572d;
+}
 
 /* CONFIGURAÇÃO DE ESPAÇAMENTO DAS IMAGENS DA PÁGINA */
 
 .Imagem{
     padding: 12pt;
-}
-
-/* -= COR DO FOOTER =- */
-.corFooter{
-    background-color: #005c30;
 }
 
 /* -= ESTILIZAÇÃO PÁGINA ARTES - CALTON =- */
@@ -192,13 +192,13 @@ img {
     font-size: 20pt;
 }
 
+
+
 /* -= ESTILIZAÇÃO PÁGINA ESPORTES - RAFAEL =- */
 /* Mesma coisa que a base */
 
 /* -= ESTILIZAÇÃO PÁGINA RAP - YANK =- */
 /* Mesma coisa que a base */
-
-
 
 
 
