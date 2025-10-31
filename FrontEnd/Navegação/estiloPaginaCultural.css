@@ -4,6 +4,20 @@
 /* IMPORTANDO A FONTE DA WEB */
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 
+body{
+     background-image: url('https://i.ibb.co/35Tt2KR1/Design-sem-nome.png');
+     background-repeat: no-repeat; 
+
+    
+     background-size: cover; 
+
+     background-position: center;
+
+     background-attachment: fixed;
+
+     min-height: 100vh;
+     margin: 0; 
+}
 
 /* DEFININDO TODOS OS H1'S DO PROJETO COM A SEGUINTE FONTE */
 
@@ -183,6 +197,7 @@ img {
 
 /* -= ESTILIZAÇÃO PÁGINA RAP - YANK =- */
 /* Mesma coisa que a base */
+
 
 
 
