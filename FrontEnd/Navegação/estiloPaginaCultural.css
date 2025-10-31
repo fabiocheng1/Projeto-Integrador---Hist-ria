@@ -71,6 +71,11 @@ img {
     padding: 12pt;
 }
 
+/* -= COR DO FOOTER =- */
+.corFooter{
+    background-color: #005c30;
+}
+
 /* -= ESTILIZAÇÃO PÁGINA ARTES - CALTON =- */
 /* igual ao padrão */
 
@@ -178,6 +183,7 @@ img {
 
 /* -= ESTILIZAÇÃO PÁGINA RAP - YANK =- */
 /* Mesma coisa que a base */
+
 
 
 
