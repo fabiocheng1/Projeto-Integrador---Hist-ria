@@ -1,189 +1,267 @@
-
-<html>
-
-  <!-- TAG HEAD PARA CONFIGURAÇÃO DE ELEMENTOS NÃO VISUAIS DA PÁGINA -->
-  <head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- CONFIGURAÇÃO DE ELEMENTOS NÃO VISUAIS DA PÁGINA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCANEIA NEVES - ESPORTES</title>
+    
     <!-- CONECTANDO O HTML COM O ARQUIVO MINIMIZADO DO FRAMEWORK BOOTSTRAP -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- COENCTANDO O HMTL COM O ARQUIVO DE ESTILIZAÇÃO INTERNO -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.8/css/bootstrap.min.css" xintegrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- COENCTANDO O HMTL COM O ARQUIVO DE ESTILIZAÇÃO INTERNO (MANTIDO, mas estilos de lupa estão abaixo) -->
     <link rel="stylesheet" href="estiloPaginaCultural.css">
+    <!-- Ícones Font Awesome (necessário para a lupa e o modal) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  </head>
+    <!-- ESTILOS CUSTOMIZADOS PARA A LUPA E O MODAL -->
+   
+
+</head>
 
 
 <!-- TAG HEAD PARA DEFINIR OS ELEMENTOS VISUAIS DA PÁGINA -->
-  <body>
+<body>
     
-         <!-- NAVBAR DA PÁGINA -->
+    <!-- NAVBAR DA PÁGINA -->
     <nav class="navbar sticky-top bg-body-tertiary">
 
         <div class="container-fluid corNavbar posicaoNavbar tamanhoNavBar ">
-          <!-- DEFININDO UMA LINHA QUE IRÁ OCUPAR TODO O CONTAINER E QUE IRÁ AJUSTAR SEUS ITENS NO CENTRO JUNTO AO TEXTO -->
-          <div class="row w-100 align-items-center text-center">
-            <!-- DEFININDO UMA COLUNA QUE IRÁ OCUPAR APENAS 1/4 DO TAMANHO TOTAL DO CONTAINER E QUE IRÁ FICAR CENTRALIZADO PARA POSICIONAR O BOTÃO DE VOLTAR AO INDEX -->
-            <div class ="col-sm-3 d-flex justify-content-start">
-              <!-- LINK QUE FARÁ A NAVEGAÇÃO DA PÁGINA DE ESPORTES PARA A PÁGINA PRINCIPAL CULTURAL -->
-                <a class="navbar-brand" href="inicialCultural.html">
+            <!-- DEFININDO UMA LINHA QUE IRÁ OCUPAR TODO O CONTAINER E QUE IRÁ AJUSTAR SEUS ITENS NO CENTRO JUNTO AO TEXTO -->
+            <div class="row w-100 align-items-center text-center">
+                <!-- COLUNA BOTÃO DE VOLTAR -->
+                <div class ="col-sm-3 d-flex justify-content-start">
+                    <!-- LINK QUE FARÁ A NAVEGAÇÃO DA PÁGINA DE ESPORTES PARA A PÁGINA PRINCIPAL CULTURAL -->
+                    <a class="navbar-brand" href="inicialCultural.html">
+                    
+                        <!-- ICON DE SETA NATIVO DO BOOTSTRAP -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
+                        </svg>
                 
-                <!-- ICON DE SETA NATIVO DO BOOTSTRAP -->
-                <!-- OBS: NO ATRIBUTO FILL COLOCO A COR WHITE -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
-                </svg>
-        
-                </a>
+                    </a>
+
+                </div>
+
+                <!-- COLUNA TÍTULO CENTRAL -->
+                <div class="col-sm-6 d-flex justify-content-center">
+                    <a href="../../index.html"><h1 class="m-0 tituloNavbar mt-3 mb-3">ESCANEIA NEVES</h1></a>
+                </div>
+
+                <!-- COLUNA BOTÃO DE PESQUISA (Substituído pelo botão interativo) -->
+                <div class="col-sm-3 d-flex justify-content-end">
+                    <!-- Botão de Lupa Interativo para abrir o Modal -->
+                    <div class="lupa-container lupa-nav-btn" id="lupa-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
 
             </div>
-
-            <!-- COLUNA QUE IRÁ OCUPAR 1/2 DO CONTAINER E POSICIONA OS SEUS ELEMENTOS CENTRALIZADOS -->
-            <div class="col-sm-6 d-flex justify-content-center">
-              <!-- UTILIZO O M-O PARA QUE O H1 OCUPE TODO O ESPAÇO E USO A CLASSE tituloNavbar PARA DEIXAR O TÍTULO BRANCO, POIS COMO O FUNDO DA PÁGINA É BRANCO ELE DEVERÁ SER PRETO NOS OUTROS -->
-              <a href="../../index.html"><h1 class="m-0 tituloNavbar mt-3 mb-3">ESCANEIA NEVES</h1></a>
-            </div>
-
-            <!-- COLUNA QUE IRÁ OCUPAR 1/4 DO CONTAINER, ONDE FICARÁ O BOTÃO DE MENU -->
-            <div class="col-sm-3 d-flex justify-content-end">
-              
-              <!-- ÍCONE NATIVO DO BOOTSTRAP, APENAS ALTEREI O ATRIBUTO FILL COM A COR WHITE -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                </svg>
-
-            </div>
-
-           
-          
-          </div>
         </div>
-
-
-
-      </div>
     </nav>
 
     <!-- FECHO TODAS AS DIV'S E FECHO O CONTAINER, POIS OS OUTROS ELEMENTOS NÃO TERÃO O COMPORTAMENTO DE UMA NAVBAR -->
     <!-- CRIO UM CONTAINER FLUID PARA OS OUTROS ELEMENTOS DA VISUAIS -->
-    <div class="container-fluid pading">   
+    <div class="container-fluid pading">   
 
-      <!-- CRIO UMA LINHA PARA POSICIONAR OS ELEMENTOS A PARTIR  -->
-      <div class="row">
-
-        <!-- INSIRO UMA COLUNA OCUPANDO 1/2 DO CONTAINER PARA ALINHAR À ESQUERDA -->
-        <div class="col-sm-12 d-flex justify-content-start ">
-
-          <!-- IMAGEM COM LINK ABSOLUTO COM A CLASSE ROUNDED PARA DEIXAR AS BORDAS ARREDONDADAS, A CLASSE INTERNA IMAGEM PARA DEFINIR SEU PADDING E DEFINO O WIDHT EM PT PARA SE AJUSTAR À TELA -->
-          <img src="https://ribeiraodasneves.mg.gov.br/wp-content/uploads/2023/06/BA8CBA0B-375D-BA7E-2AED-AEDDB8A633AB-e1686939572264.jpeg" class="rounded img-fluid imagem w-100">
+        <!-- SEÇÃO 1: IMAGEM PRINCIPAL -->
+        <div class="row">
+            <div class="col-sm-12 d-flex justify-content-start ">
+                <!-- IMAGEM COM LINK ABSOLUTO COM A CLASSE ROUNDED PARA DEIXAR AS BORDAS ARREDONDADAS, A CLASSE INTERNA IMAGEM PARA DEFINIR SEU PADDING E DEFINO O WIDHT EM PT PARA SE AJUSTAR À TELA -->
+                <img src="https://ribeiraodasneves.mg.gov.br/wp-content/uploads/2023/06/BA8CBA0B-375D-BA7E-2AED-AEDDB8A633AB-e1686939572264.jpeg" class="rounded img-fluid imagem w-100">
+            </div>
         </div>
 
-      </div>
-
-
-      <div class="row">
-
-        <!-- OUTRA COLUNA QUE IRÁ FICAR A DIREITA E TERÁ UM FLEX-COLUMN PARA ALINHAR OS ELEMENTOS TEXTUAIS VERTICALMENTE -->
-        <div class="col-sm-12 d-flex flex-column align-items-center justify-content-start">
-          
-          <!-- M-0 PARA AUXILIAR NO ESPAÇO QUE O H1 IRÁ OCUPAR -->
-          <h1 class="m-0">
-            ESPORTES EM NEVES
-          </h1>
-
-          <!-- CLASSE TEXT-CENTER PARA CENTRALIZAR O TEXTO -->
-          <h1 class="text-center fs-2">
-            <!-- USO A TAG B PARA DEIXAR EM NEGRITO E CRIAR UM SUBTÍTULO -->
-            PRIMEIRAS MANIFESTAÇÕES E PRINCIAPIS MODALIDADES
-                 
-          </h1>
-
-          <!-- TEXTO USADO COMO EXEMPLO JUNTO À CLASSE TEXT-CENTER PARA ALINHAR OS ELEMENTOS -->
-          <p class="text-center fs-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione deserunt dolorum quos hic consectetur, pariatur cumque! Cumque perferendis expedita error architecto laudantium illum ex explicabo, cum quaerat consectetur eligendi ducimus.</p>
-        </div>
-      
-        
-
-
- 
-      </div>
-
-      <!-- LINHA VAZIA PARA QUE EU POSSA UTILIZAR O ESPAÇO DO CONTAINER DE UMA FORMA MAIS BEM DISPOSTA -->
-      <div class="row">
-
-        <div class="col-sm-12"></div>
-
-          <img src="https://ribeiraodasneves.net/midia/imagens/2023-10/01-alissonslackpro.jpg" class="rounded imagem w-100">
-
+        <!-- SEÇÃO 2: TÍTULO E SUBTÍTULO -->
+        <div class="row">
+            <div class="col-sm-12 d-flex flex-column align-items-center justify-content-start">
+                <h1 class="m-0">ESPORTES EM NEVES</h1>
+                <h1 class="text-center fs-2">
+                    <!-- USO A TAG B PARA DEIXAR EM NEGRITO E CRIAR UM SUBTÍTULO -->
+                    <b>PRIMEIRAS MANIFESTAÇÕES E PRINCIAPIS MODALIDADES</b>
+                </h1>
+                <!-- TEXTO USADO COMO EXEMPLO JUNTO À CLASSE TEXT-CENTER PARA ALINHAR OS ELEMENTOS -->
+                <p class="text-center fs-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione deserunt dolorum quos hic consectetur, pariatur cumque! Cumque perferendis expedita error architecto laudantium illum ex explicabo, cum quaerat consectetur eligendi ducimus.</p>
+            </div>
         </div>
 
 
-      <!-- OUTRA LINHA PARA POSICIONAR OS ÚLTIMOS ELEMENTOS -->
-      <div class="row">
-
-
-        <!-- OCUPO METADE DO CONTAINER NA HORIZONTAL E USO FLEX-COLUMN PARA AJUSTAR TODO O TEXTO -->
-        <div class="col-sm-12 d-flex flex-column align-items-center justify-content-start">
-
-          <!-- CLASSE TEXT-CENTER PARA CENTRALIZAR O TEXTO -->
-          <h1 class="text-center fs-2">
-             <!-- USO A TAG B PARA DEIXAR EM NEGRITO E CRIAR UM SUBTÍTULO -->
-            PRINCIPAIS ESPORTISTAS E MODALIDADES OFERECIDAS
-          </h1>
-
-           <!-- CLASSE TEXT-CENTER PARA CENTRALIZAR O TEXTO -->
-          <p class="text-center fs-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident in asperiores eveniet sint fugiat quibusdam, accusamus enim quis neque, repellat adipisci. Maiores, error voluptatibus perspiciatis suscipit dignissimos totam quisquam!</p>
-
-           <!-- CLASSE TEXT-CENTER PARA CENTRALIZAR O TEXTO -->
-          <h1 class="text-center fs-2">
-             <!-- USO A TAG B PARA DEIXAR EM NEGRITO E CRIAR UM SUBTÍTULO -->
-            LOCAIS ONDE OCORRE
-          </h1>
-
-          <!-- CLASSE TEXT-CENTER PARA CENTRALIZAR O TEXTO -->
-          <p class="text-center fs-2">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque dolor inventore, iure adipisci expedita eligendi dolores quis esse ab distinctio velit harum eius suscipit ullam. Corporis corrupti ipsam delectus cumque.
-          </p>
-
+        <!-- SEÇÃO 3: IMAGEM SECUNDÁRIA -->
+        <div class="row">
+            <div class="col-sm-12"></div>
+            <img src="https://ribeiraodasneves.net/midia/imagens/2023-10/01-alissonslackpro.jpg" class="rounded imagem w-100">
         </div>
 
 
-        
+        <!-- SEÇÃO 4: TEXTOS FINAIS -->
+        <div class="row">
+            <div class="col-sm-12 d-flex flex-column align-items-center justify-content-start">
+                <h1 class="text-center fs-2">
+                    <b>PRINCIPAIS ESPORTISTAS E MODALIDADES OFERECIDAS</b>
+                </h1>
+                <p class="text-center fs-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident in asperiores eveniet sint fugiat quibusdam, accusamus enim quis neque, repellat adipisci. Maiores, error voluptatibus perspiciatis suscipit dignissimos totam quisquam!</p>
 
-      </div>
-
-      
-
-       
-
-
-
-
-
-      </div>
-
-
-
-
-
-
-
-
-
-
+                <h1 class="text-center fs-2">
+                    <b>LOCAIS ONDE OCORRE</b>
+                </h1>
+                <p class="text-center fs-2">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque dolor inventore, iure adipisci expedita eligendi dolores quis esse ab distinctio velit harum eius suscipit ullam. Corporis corrupti ipsam delectus cumque.
+                </p>
+            </div>
+        </div>
     </div>
 
+
+    <!-- RODAPÉ -->
     <footer class="bg-body-tertiary text-center text-lg-start mt-4 row">
-      <div class="text-center p-3 corFooter">
-          <a class="text-white">© 2025 Copyright: Escaneia Neves</a>
-      </div>
-  </footer>
+        <div class="text-center p-3 corFooter">
+            <a class="text-white">© 2025 Copyright: Escaneia Neves</a>
+        </div>
+    </footer>
 
 
+    <!-- MODAL/POPUP DE PESQUISA (INVISÍVEL ATÉ O CLIQUE) -->
+    <div id="popup-pesquisa" class="modal">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <h2 style="margin: 0; color: #333;">🔎 Pesquisar Conteúdo</h2>
+                <span class="close-button" id="close-btn">&times;</span>
+            </div>
 
-  </body>
+            <!-- Campo de pesquisa dentro do modal -->
+            <input type="text" id="pesc-modal" placeholder="Digite para filtrar (ex: 'Carnaval', 'Dança', 'Festa')">
+
+            <!-- Área onde os resultados serão injetados pelo JS -->
+            <div id="search-content">
+                <!-- Conteúdo inicial será carregado aqui -->
+            </div>
+            
+        </div>
+    </div>
 
 
+    <!-- LÓGICA JAVASCRIPT -->
+    <script>
+        // --- 1. Estrutura de Dados (Manifestações Culturais) ---
+        const dadosSite = {
+            aulas: [ // Destaques Culturais (com mais detalhes)
+                { titulo: "Artes", texto: "teste", materia: "teste" },
+                { titulo: "Capoeira ", texto: "teste", materia: "teste" },
+                { titulo: "Catolicismo", texto: "teste", materia: "teste" },
+                { titulo: "Educação", texto: "teste", materia: "teste" },
+                { titulo: "Esportes", texto: "teste", materia: "teste" },
+                { titulo: "Rap", texto: "teste", materia: "teste" }
+            ],
+            questoes: [ // Outras Manifestações (itens rápidos)
+                { id: "maracatu", titulo: "Maracatu", materia: "Música/Dança Afro-Brasileira" },
+                { id: "frevo", titulo: "Frevo", materia: "Música/Dança do Nordeste" },
+                { id: "capoeira", titulo: "Capoeira", materia: "Luta/Dança Afro-Brasileira" },
+                { id: "seresta", titulo: "Seresta Nevense", materia: "Música Tradicional" },
+                { id: "teatro", titulo: "Grupos de Teatro Amador", materia: "Artes Cênicas" },
+            ]
+        };
+
+        // --- 2. Funções JavaScript de Pesquisa e Exibição ---
+
+        function pesquisarEmArrayDeObjetos(termo, dados, camposParaPesquisar) {
+            const termoNormalizado = termo.toLowerCase().trim();
+
+            if (!termoNormalizado) {
+                return dados;
+            }
+
+            return dados.filter(item => {
+                for (const campo of camposParaPesquisar) {
+                    const valorCampo = item[campo];
+
+                    if (valorCampo && typeof valorCampo === 'string' && valorCampo.toLowerCase().includes(termoNormalizado)) {
+                        return true;
+                    }
+                }
+                return false;
+            });
+        }
+
+        function executarPesquisa(termo) {
+            const searchContent = document.getElementById('search-content');
+            const termoNormalizado = termo.toLowerCase().trim();
+
+            const aulasEncontradas = pesquisarEmArrayDeObjetos(termoNormalizado, dadosSite.aulas, ['titulo', 'texto', 'materia']);
+            const questoesEncontradas = pesquisarEmArrayDeObjetos(termoNormalizado, dadosSite.questoes, ['id', 'titulo', 'materia']);
+
+            let htmlConteudo = '';
+            
+            if (aulasEncontradas.length > 0) {
+                htmlConteudo += '<h3>📚 Destaques Culturais (' + aulasEncontradas.length + ')</h3>';
+                aulasEncontradas.forEach(item => {
+                    htmlConteudo += `
+                        <div class="resultado-item">
+                            <h4>${item.titulo}</h4>
+                            <p>${item.texto}</p>
+                            <p><i>Categoria: ${item.materia}</i></p>
+                        </div>
+                    `;
+                });
+            }
+
+            if (questoesEncontradas.length > 0) {
+                htmlConteudo += '<h3>📝 Outras Manifestações (' + questoesEncontradas.length + ')</h3>';
+                questoesEncontradas.forEach(item => {
+                    htmlConteudo += `
+                        <div class="resultado-item">
+                            <h4>${item.titulo}</h4>
+                            <p>Categoria: ${item.materia}</p>
+                        </div>
+                    `;
+                });
+            }
+
+            // Se nada for encontrado E o termo não estiver vazio
+            if (aulasEncontradas.length === 0 && questoesEncontradas.length === 0 && termoNormalizado.length > 0) {
+                htmlConteudo = '<p>🛑 <strong>Nenhum conteúdo encontrado.</strong> Tente outro termo de pesquisa.</p>';
+            }
+            // Se abrir e não houver conteúdo
+            else if (aulasEncontradas.length === 0 && questoesEncontradas.length === 0) {
+                 htmlConteudo = '<p>Nenhum conteúdo cadastrado na base de dados.</p>';
+            }
+
+            searchContent.innerHTML = htmlConteudo;
+        }
 
 
+        // --- 3. Controle de Eventos e Modal ---
+        
+        const lupaBtn = document.getElementById('lupa-btn');
+        const modal = document.getElementById('popup-pesquisa');
+        const closeBtn = document.getElementById('close-btn');
+        const inputModal = document.getElementById('pesc-modal');
 
+        // FUNÇÃO PARA ABRIR O MODAL E LISTAR TUDO INICIALMENTE
+        lupaBtn.addEventListener('click', () => {
+            inputModal.value = '';
+            executarPesquisa(''); // Termo vazio lista todos os itens
+            modal.style.display = 'block';
+            inputModal.focus(); 
+        });
 
+        // FUNÇÃO PARA FILTRAR ENQUANTO O USUÁRIO DIGITA (Live search)
+        inputModal.addEventListener('keyup', (event) => {
+            const termoDigitado = event.target.value;
+            executarPesquisa(termoDigitado);
+        });
 
-</html>
+        // FUNÇÃO PARA FECHAR O MODAL (Botão X)
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        // FUNÇÃO PARA FECHAR O MODAL AO CLICAR FORA dele
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+    
+    <!-- Script do Bootstrap (necessário para os componentes) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.8/js/bootstrap.bundle.min.js" xintegrity="sha512-R57u3z2b/C/8b/dY/5b+c5y5B9X65F9+A8g/YvKz5h5K5V5/3d/y5S5F5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A
