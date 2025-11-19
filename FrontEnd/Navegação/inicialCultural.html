@@ -3,6 +3,8 @@
 <head>
   <title>Escaneia Neves</title>
 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css"
     integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -31,16 +33,7 @@
         </div>
 
         <!-- COLUNA QUE IRÁ OCUPAR 1/4 DO CONTAINER, ONDE FICARÁ O BOTÃO DE MENU -->
-        <div class="col-sm-3 d-flex justify-content-end">
-
-          <!-- ÍCONE NATIVO DO BOOTSTRAP, APENAS ALTEREI O ATRIBUTO FILL COM A COR WHITE -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-search"
-            viewBox="0 0 16 16">
-            <path
-              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-          </svg>
-
-        </div>
+       
 
 
 
@@ -152,6 +145,18 @@
         <a class="text-white">© 2025 Copyright: Escaneia Neves</a>
     </div>
 </footer>
+ <script>
+
+        var hora = new Date().getHours();
+
+        if (hora >= 18 || hora <=6){
+
+            $("body").attr("data-bs-theme", "dark");
+
+        }
+
+
+    </script>
 
 </body>
 

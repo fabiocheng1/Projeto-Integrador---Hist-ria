@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESCANEIA NEVES - ESPORTES</title>
+
+
     
     <!-- CONECTANDO O HTML COM O ARQUIVO MINIMIZADO DO FRAMEWORK BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.8/css/bootstrap.min.css" xintegrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,6 +14,7 @@
     <link rel="stylesheet" href="estiloPaginaCultural.css">
     <!-- Ícones Font Awesome (necessário para a lupa e o modal) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- ESTILOS CUSTOMIZADOS PARA A LUPA E O MODAL -->
    
@@ -48,12 +51,7 @@
                 </div>
 
                 <!-- COLUNA BOTÃO DE PESQUISA (Substituído pelo botão interativo) -->
-                <div class="col-sm-3 d-flex justify-content-end">
-                    <!-- Botão de Lupa Interativo para abrir o Modal -->
-                    <div class="lupa-container lupa-nav-btn" id="lupa-btn">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                </div>
+             
 
             </div>
         </div>
@@ -118,150 +116,20 @@
         </div>
     </footer>
 
-
-    <!-- MODAL/POPUP DE PESQUISA (INVISÍVEL ATÉ O CLIQUE) -->
-    <div id="popup-pesquisa" class="modal">
-        <div class="modal-content">
-            
-            <div class="modal-header">
-                <h2 style="margin: 0; color: #333;">🔎 Pesquisar Conteúdo</h2>
-                <span class="close-button" id="close-btn">&times;</span>
-            </div>
-
-            <!-- Campo de pesquisa dentro do modal -->
-            <input type="text" id="pesc-modal" placeholder="Digite para filtrar (ex: 'Carnaval', 'Dança', 'Festa')">
-
-            <!-- Área onde os resultados serão injetados pelo JS -->
-            <div id="search-content">
-                <!-- Conteúdo inicial será carregado aqui -->
-            </div>
-            
-        </div>
-    </div>
-
-
-    <!-- LÓGICA JAVASCRIPT -->
     <script>
-        // --- 1. Estrutura de Dados (Manifestações Culturais) ---
-        const dadosSite = {
-            aulas: [ // Destaques Culturais (com mais detalhes)
-                { titulo: "Artes", texto: "teste", materia: "teste" },
-                { titulo: "Capoeira ", texto: "teste", materia: "teste" },
-                { titulo: "Catolicismo", texto: "teste", materia: "teste" },
-                { titulo: "Educação", texto: "teste", materia: "teste" },
-                { titulo: "Esportes", texto: "teste", materia: "teste" },
-                { titulo: "Rap", texto: "teste", materia: "teste" }
-            ],
-            questoes: [ // Outras Manifestações (itens rápidos)
-                { id: "maracatu", titulo: "Maracatu", materia: "Música/Dança Afro-Brasileira" },
-                { id: "frevo", titulo: "Frevo", materia: "Música/Dança do Nordeste" },
-                { id: "capoeira", titulo: "Capoeira", materia: "Luta/Dança Afro-Brasileira" },
-                { id: "seresta", titulo: "Seresta Nevense", materia: "Música Tradicional" },
-                { id: "teatro", titulo: "Grupos de Teatro Amador", materia: "Artes Cênicas" },
-            ]
-        };
 
-        // --- 2. Funções JavaScript de Pesquisa e Exibição ---
+        var hora = new Date().getHours();
 
-        function pesquisarEmArrayDeObjetos(termo, dados, camposParaPesquisar) {
-            const termoNormalizado = termo.toLowerCase().trim();
+        if (hora>=18 || hora<=6){
 
-            if (!termoNormalizado) {
-                return dados;
-            }
+            $("body").attr("data-bs-theme", "dark");
 
-            return dados.filter(item => {
-                for (const campo of camposParaPesquisar) {
-                    const valorCampo = item[campo];
-
-                    if (valorCampo && typeof valorCampo === 'string' && valorCampo.toLowerCase().includes(termoNormalizado)) {
-                        return true;
-                    }
-                }
-                return false;
-            });
-        }
-
-        function executarPesquisa(termo) {
-            const searchContent = document.getElementById('search-content');
-            const termoNormalizado = termo.toLowerCase().trim();
-
-            const aulasEncontradas = pesquisarEmArrayDeObjetos(termoNormalizado, dadosSite.aulas, ['titulo', 'texto', 'materia']);
-            const questoesEncontradas = pesquisarEmArrayDeObjetos(termoNormalizado, dadosSite.questoes, ['id', 'titulo', 'materia']);
-
-            let htmlConteudo = '';
-            
-            if (aulasEncontradas.length > 0) {
-                htmlConteudo += '<h3>📚 Destaques Culturais (' + aulasEncontradas.length + ')</h3>';
-                aulasEncontradas.forEach(item => {
-                    htmlConteudo += `
-                        <div class="resultado-item">
-                            <h4>${item.titulo}</h4>
-                            <p>${item.texto}</p>
-                            <p><i>Categoria: ${item.materia}</i></p>
-                        </div>
-                    `;
-                });
-            }
-
-            if (questoesEncontradas.length > 0) {
-                htmlConteudo += '<h3>📝 Outras Manifestações (' + questoesEncontradas.length + ')</h3>';
-                questoesEncontradas.forEach(item => {
-                    htmlConteudo += `
-                        <div class="resultado-item">
-                            <h4>${item.titulo}</h4>
-                            <p>Categoria: ${item.materia}</p>
-                        </div>
-                    `;
-                });
-            }
-
-            // Se nada for encontrado E o termo não estiver vazio
-            if (aulasEncontradas.length === 0 && questoesEncontradas.length === 0 && termoNormalizado.length > 0) {
-                htmlConteudo = '<p>🛑 <strong>Nenhum conteúdo encontrado.</strong> Tente outro termo de pesquisa.</p>';
-            }
-            // Se abrir e não houver conteúdo
-            else if (aulasEncontradas.length === 0 && questoesEncontradas.length === 0) {
-                 htmlConteudo = '<p>Nenhum conteúdo cadastrado na base de dados.</p>';
-            }
-
-            searchContent.innerHTML = htmlConteudo;
         }
 
 
-        // --- 3. Controle de Eventos e Modal ---
-        
-        const lupaBtn = document.getElementById('lupa-btn');
-        const modal = document.getElementById('popup-pesquisa');
-        const closeBtn = document.getElementById('close-btn');
-        const inputModal = document.getElementById('pesc-modal');
-
-        // FUNÇÃO PARA ABRIR O MODAL E LISTAR TUDO INICIALMENTE
-        lupaBtn.addEventListener('click', () => {
-            inputModal.value = '';
-            executarPesquisa(''); // Termo vazio lista todos os itens
-            modal.style.display = 'block';
-            inputModal.focus(); 
-        });
-
-        // FUNÇÃO PARA FILTRAR ENQUANTO O USUÁRIO DIGITA (Live search)
-        inputModal.addEventListener('keyup', (event) => {
-            const termoDigitado = event.target.value;
-            executarPesquisa(termoDigitado);
-        });
-
-        // FUNÇÃO PARA FECHAR O MODAL (Botão X)
-        closeBtn.onclick = function() {
-            modal.style.display = 'none';
-        }
-
-        // FUNÇÃO PARA FECHAR O MODAL AO CLICAR FORA dele
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
     </script>
-    
-    <!-- Script do Bootstrap (necessário para os componentes) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.8/js/bootstrap.bundle.min.js" xintegrity="sha512-R57u3z2b/C/8b/dY/5b+c5y5B9X65F9+A8g/YvKz5h5K5V5/3d/y5S5F5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A5B5h5w5d/e5A
+
+</body>
+
+
+   
