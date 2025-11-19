@@ -1,17 +1,17 @@
 /* Importando fonte do google fontes */
 @import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
 
-.pading{
+.pading {
   padding: 30pt;
 }
 
 /* CONFIGURAÇÃO DO FOOTER */
 
-.corFooter{
-  background-color:#00572d;
+.corFooter {
+  background-color: #00572d;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -34,15 +34,14 @@ h2 {
   height: 700px;
 }
 
-/* Deixando o body com a mesma cor de fundo que o esboço de telas feito
-na etapa passada, adicionado um degradê ao fundo*/
 body {
-  /* 
-  Adicionado o degradê junto da cor principal
-  Cor principal (a mais clara) -> #b7da86
-  Cor secundária (a mais escura) -> #8ead62
-  */
   background: linear-gradient(to top, #8ead62, #b7da86);
+}
+
+[data-bs-theme="dark"] {
+  /* background-image: url(''); */
+
+  background: linear-gradient(to top, #191a1c, #2e3036);
 }
 
 /* Essa classe está sendo utilizada para formatar e estilizar os botões de "next" do
@@ -69,6 +68,7 @@ body {
 .textoComBorda {
   /* Aplicando as sombras */
   text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black,
-    3px 3px 0 black ;
-    font-size: 25pt;
+    3px 3px 0 black;
+  font-size: 25pt;
+  
 }
