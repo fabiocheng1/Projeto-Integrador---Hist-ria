@@ -4,6 +4,8 @@
 
 **Link de Acesso ao Fluxo de Navegação:** [https://www.canva.com/design/DAGv3lu7Os8/SP89OOxtFaAi6CeS_AoLfQ/edit?utm_content=DAGv3lu7Os8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton](https://www.canva.com/design/DAGv3lu7Os8/SP89OOxtFaAi6CeS_AoLfQ/edit?utm_content=DAGv3lu7Os8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
+**Link de Acesso as Atas de Reunião:** [https://docs.google.com/document/d/1FfaPN6w81Awh2wrsIOTB5tF2470CTmS3ZQkr0_AOOaE/edit?usp=sharing](https://docs.google.com/document/d/1FfaPN6w81Awh2wrsIOTB5tF2470CTmS3ZQkr0_AOOaE/edit?usp=sharing)
+
 ## O que é o Projeto Escaneia Neves?
 O projeto Escaneia Neves consiste na criação de um site de divulgação informacional sobre aspectos históricos e culturais de Ribeirão das Neves com o uso de QR Codes espalhados pela cidade, em pontos específicos, vinculados a páginas web do projeto. O objetivo é valorizar a memória coletiva dos moradores locais e promover o conhecimento sobre os aspectos históricos e culturais da cidade, reforçando a identidade histórico-cultural com o acesso a informação.
 
