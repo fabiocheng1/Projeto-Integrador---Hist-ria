@@ -1,6 +1,6 @@
 # Projeto Escaneia Neves
 
-**Link de Acesso Público ao Site:** [https://fabiocheng1.github.io/Projeto-Integrador---Hist-ria/FrontEnd/Navega%C3%A7%C3%A3o/inicialCultural.html](https://fabiocheng1.github.io/Projeto-Integrador---Hist-ria/FrontEnd/Navega%C3%A7%C3%A3o/inicialCultural.html)
+**Link de Acesso Público ao Site:** [https://fabiocheng1.github.io/Projeto-Integrador---Hist-ria/FrontEnd/Navega%C3%A7%C3%A3o/index.html](https://fabiocheng1.github.io/Projeto-Integrador---Hist-ria/FrontEnd/Navega%C3%A7%C3%A3o/index.html)
 
 **Link de Acesso ao Fluxo de Navegação:** [https://www.canva.com/design/DAGv3lu7Os8/SP89OOxtFaAi6CeS_AoLfQ/edit?utm_content=DAGv3lu7Os8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton](https://www.canva.com/design/DAGv3lu7Os8/SP89OOxtFaAi6CeS_AoLfQ/edit?utm_content=DAGv3lu7Os8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
