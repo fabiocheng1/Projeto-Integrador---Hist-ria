@@ -2,7 +2,7 @@
 
 **Link de Acesso Público ao Site:** [https://fabiocheng1.github.io/Projeto-Integrador---Hist-ria/index.html](https://fabiocheng1.github.io/Projeto-Integrador---Hist-ria/index.html)
 
-**Link de Acesso ao Fluxo de Navegação:** [https://www.canva.com/design/DAGv3lu7Os8/SP89OOxtFaAi6CeS_AoLfQ/edit?utm_content=DAGv3lu7Os8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton](https://www.canva.com/design/DAGv3lu7Os8/SP89OOxtFaAi6CeS_AoLfQ/edit?utm_content=DAGv3lu7Os8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+**Link de Acesso ao Fluxo de Navegação:** [https://www.canva.com/design/DAG6LQ3otuQ/pqaElw-QKYhyFXNMycVEpA/edit?utm_content=DAG6LQ3otuQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton](https://www.canva.com/design/DAG6LQ3otuQ/pqaElw-QKYhyFXNMycVEpA/edit?utm_content=DAG6LQ3otuQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 **Link de Acesso as Atas de Reunião:** [https://docs.google.com/document/d/1FfaPN6w81Awh2wrsIOTB5tF2470CTmS3ZQkr0_AOOaE/edit?usp=sharing](https://docs.google.com/document/d/1FfaPN6w81Awh2wrsIOTB5tF2470CTmS3ZQkr0_AOOaE/edit?usp=sharing)
 
