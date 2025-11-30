@@ -19,17 +19,20 @@ Da página index do projeto, é possível ver notícias de Ribeirão das Neves p
 
 Ao escanear o QR Code de um ponto específico da cidade, o usuário será redirecionado a uma página de ponto histórico feita pelo grupo histórico do projeto Escaneia Neves. Desse modo, poderá compreender sobre a história desse ponto em específico. A partir da página histórica, o usuário pode acessar as manifestações culturais de determinado ponto, assim, possibilitando a navegação de páginas históricas e culturais de ambos os grupos durante todo o uso do site do projeto Escaneia Neves.
 
-2. Pesquisa de Pontos Culturais
 
-Aparecerá uma barra de pesquisa ao clicar no ícone de três risquinhos no canto superior direito das barras de navegação, desse modo, o usuário poderá pesquisar algum ponto cultural específico, desde que esteja cadastrado no site.
+2. Mudança do Tema de Cores
+
+Entre os horários de 18:00 e 06:00 do sistema, o site irá incorporar um tema escuro que facilita a leitura nesses horários.
+
 
 3. Carrosel de Notícias
 
 Um carrosel das principais notícias de Ribeião das Neves.
 
-4. Botão voltar
 
-Possibilita que o usuário possa transitar entre as páginas, voltando para uma página anteriormente visitada, ao clicar no botão de "voltar" a esquerda da navbar fixa ao topo das páginas.
+5. Botão voltar e Título Escaneia Neves
+
+O botão voltar ossibilita que o usuário possa transitar entre as páginas, voltando para uma página anteriormente visitada, ao clicar no botão de "voltar" a esquerda da navbar fixa ao topo das páginas. Além disso, é possível retornar a página index do projeto clicando no título "Escaneia Neves" nas navbar's.
 
 ## Autores
 *	[Arthur Pereira Rodrigues](https://github.com/Arthur16-P)
